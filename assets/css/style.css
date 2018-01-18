@@ -64,6 +64,9 @@ body {
 	height: 80%;
 }
 #row2 {
-	background: #007c91;
-	border-bottom: 30px solid #007c91;
+	background: #60d4ea;
+	border-bottom: 50px solid #60d4ea;
+}
+.navigationBlue {
+	background: #007388;
 }
