@@ -15,19 +15,16 @@
         "react"
     ],
     "rules": {
-        "indent": [
-            "error",
-            "tab"
-        ],
-        "linebreak-style": [
-            "error",
-            "windows"
-        ],
+        // "indent": [
+        //     "error",
+        //     "tab"
+        // ],
         "quotes": [
-            "error",
-            "double",
-            "backtick"
-        ],
+          "error", 
+          "double", { 
+            "allowTemplateLiterals": true 
+            }
+          ],
         "semi": [
             "error",
             "always"

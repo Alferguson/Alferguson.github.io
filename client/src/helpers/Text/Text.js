@@ -1,0 +1,2 @@
+export const IntroPara = "Hi, welcome to my site, I'm constantly trying to improve it so hit me up";
+export const BioPara = "My name is John Alexander Ferguson and I'm a React/Node.js Full Stack Web Developer with some experience with R and Golang. To clarify, John Alexander is my full FIRST name but you can just call me Alex for short. I've been coding for a year now since I switched from trying to become a dietitian. While I do have much knowledge in nutrition as";

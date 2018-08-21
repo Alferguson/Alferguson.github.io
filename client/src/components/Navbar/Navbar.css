@@ -1,0 +1,76 @@
+.navbar-grid {
+  display: grid;
+  height: 100%;
+  max-width: 100%;
+  grid-template-columns: repeat(16, 1fr);
+  grid-template-areas: 
+    ". firstnav firstnav . . secondnav secondnav . thirdnav thirdnav . . . fourthnav fourthnav .";
+}
+
+.firstnav { 
+  grid-area: firstnav; 
+  margin-top: 13%;
+  height: 75%;
+  -webkit-transition: 
+    height 1.4s, 
+    margin-top 1.4s; /* For Safari 3.1 to 6.0 */
+  transition: 
+    height 1.4s, 
+    margin-top 1.4s;
+}
+.firstnav:hover, .firstnav-expand, 
+.secondnav:hover, .secondnav-expand,
+.thirdnav:hover, .thirdnav-expand,
+.fourthnav:hover, .fourthnav-expand {
+  height: 100%;
+  margin-top: 0;
+}
+.firstnav-expand {
+  grid-area: firstnav; 
+}
+
+.secondnav { 
+  grid-area: secondnav;
+  margin-top: 5%;
+  height: 85%;
+  -webkit-transition: 
+    height 1.4s, 
+    margin-top 1.4s; /* For Safari 3.1 to 6.0 */
+  transition: 
+    height 1.4s, 
+    margin-top 1.4s;
+}
+
+.secondnav-expand {
+  grid-area: secondnav; 
+}
+.thirdnav { 
+  grid-area: thirdnav; 
+  margin-top: 15%;
+  height: 65%;
+  -webkit-transition: 
+    height 1.4s, 
+    margin-top 1.4s; /* For Safari 3.1 to 6.0 */
+  transition: 
+    height 1.4s, 
+    margin-top 1.4s;
+}
+
+.thirdnav-expand {
+  grid-area: thirdnav; 
+}
+.fourthnav { 
+  grid-area: fourthnav; 
+  margin-top: 3%;
+  height: 88%;
+  -webkit-transition: 
+    height 1.4s, 
+    margin-top 1.4s; /* For Safari 3.1 to 6.0 */
+  transition: 
+    height 1.4s, 
+    margin-top 1.4s;
+}
+
+.fourthnav-expand {
+  grid-area: fourthnav; 
+}

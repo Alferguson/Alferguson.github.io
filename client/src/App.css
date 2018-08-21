@@ -1,28 +1,40 @@
 .App {
   text-align: center;
-}
-
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
-}
-
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background: #071d2b;
   color: white;
 }
-
-.App-title {
-  font-size: 1.5em;
+.grid-container {
+  display: grid;
+  grid-template-rows: 1fr 5fr;
+  grid-template-areas: 
+    "navbar"
+    "body";
+  gap: 70px;
 }
 
-.App-intro {
-  font-size: large;
+.navbar { 
+  grid-area: navbar; 
 }
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+.body { 
+  grid-area: body; 
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-areas:
+    ". centerBody centerBody centerBody centerBody centerBody centerBody .";
+  gap: 5px;
+}
+
+.centerBody {
+  grid-area: centerBody;
+}
+/* to have all images scale accordingly to their grid containers */
+img {
+  object-fit: contain;
+  max-height: 100%;
+  max-width: 100%;
 }
