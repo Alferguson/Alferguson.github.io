@@ -1,12 +1,7 @@
 import React, { Component } from "react";
 import Navbar from "./components/Navbar";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import Welcome from "./components/Welcome";
-import AboutMe from "./components/AboutMe";
-import CoolProjects from "./components/CoolProjects";
-import Dunno from "./components/Dunno";
-import ContactMe from "./components/ContactMe";
-
+import { Welcome, AboutMe, CoolProjects, ContactMe, Dunno } from "./components/Pages";
 
 import "./App.css";
 

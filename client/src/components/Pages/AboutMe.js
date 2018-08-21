@@ -3,9 +3,8 @@ import Pic from "../Pic";
 import TextBody from "../TextBody";
 import "./AboutMe.css";
 
-const AboutMe = props =>
+export const AboutMe = props =>
 	<div className="four-grid">
     <Pic className="pic" />
     <TextBody className="aboutMeText" />
   </div>;
-export default AboutMe;
