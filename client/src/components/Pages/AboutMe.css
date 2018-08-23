@@ -1,8 +1,8 @@
-.four-grid {
+/* .four-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-areas:
-    "pic aboutMeText aboutMeText aboutMeText";
+    "pic aboutMeText . .";
   gap: 2.5%;
 }
 .pic {
@@ -10,4 +10,4 @@
 }
 .aboutMeText {
   grid-area: aboutMeText;
-}
+} */

@@ -1,0 +1,70 @@
+.round {
+  border-radius: 25px;
+  background-color: white;
+  height: 60px;
+  width: 50%;
+  color: black;
+  transition: height .9s ease-out;
+  display: grid;
+  grid-template-rows: 60px 1fr;
+  grid-template-columns: 2fr 3fr 1fr;
+  grid-template-areas: 
+    "logo roundBoxText collapsable"
+    "bullet bullet lineCollapsable"
+}
+.round.expand {
+  height: 220px;
+}
+.logo {
+  grid-area: logo;
+  margin: auto;
+}
+.roundBoxText {
+  margin: auto;
+  font-size: 2em;
+  grid-area: roundBoxText;
+}
+.collapsable {
+  grid-area: collapsable;
+  position: relative;
+  display: inline-block;
+}
+.collapsable > button {
+  height: 100%;
+  width: 100%;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  border: none;
+  cursor: pointer;
+  overflow: hidden;
+  outline: none;
+}
+.collapsable svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.gear {
+  font-size: 2.5em;
+  transition: transform .9s ease-out;  
+}
+.gear-rotate {
+  transform: rotate(150deg);
+}
+
+.bullet, #bullet.hidden {
+  grid-area: bullet;
+}
+.lineCollapsable, #line.hidden {
+  grid-area: lineCollapsable;
+}
+.hidden {
+  visibility: hidden;
+}
+.line {
+  height: 0;
+  transition: height .9s ease-out;  
+}
+.line.line-expand {
+  height: 160px;
+}

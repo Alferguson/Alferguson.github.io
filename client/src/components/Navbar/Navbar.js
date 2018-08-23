@@ -16,7 +16,6 @@ class Navbar extends Component {
     const targetId = event.target.id;
     const regexexpand = RegExp("-expand*");
     const reg = regexexpand.test(targetId); 
-    console.log(targetId);
     if(!reg) {
       Object.keys(this.state).forEach(nav => {
         console.log(nav);
