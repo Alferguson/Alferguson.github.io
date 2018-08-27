@@ -18,7 +18,6 @@ class Navbar extends Component {
     const reg = regexexpand.test(targetId); 
     if(!reg) {
       Object.keys(this.state).forEach(nav => {
-        console.log(nav);
         this.setState({ [nav]: false });
       });
       this.setState(prevState => ({

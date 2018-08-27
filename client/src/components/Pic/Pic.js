@@ -3,8 +3,6 @@ import "./Pic.css";
 
 const Pic = ({ className, src, alt }) =>
 	<React.Fragment>
-		{/* <img src={require("./alfergusonPic.jpg")} alt="Me" /> */}
-    <img className={className} src={src} alt={alt} />
+    <img className={className} src={src === "./alfergusonPic.jpg" ? require("./alfergusonPic.jpg") : src} alt={alt} />
 	</React.Fragment>;
 export default Pic;
-// className="circleImg" 

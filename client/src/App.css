@@ -4,8 +4,14 @@
   width: 100%;
   margin: 0;
   padding: 0;
-  background: #071d2b;
-  color: white;
+  background: #00A5CF;
+  color: #1A1A1A;
+  font-family: "Raleway", sans-serif;
+  line-height: 2.0;
+}
+h1 {
+  word-spacing: 5px;
+  letter-spacing: 2px;
 }
 .grid-container {
   display: grid;

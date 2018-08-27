@@ -47,7 +47,7 @@
 .thirdnav { 
   grid-area: thirdnav; 
   margin-top: 15%;
-  height: 65%;
+  height: 71%;
   -webkit-transition: 
     height 1.4s, 
     margin-top 1.4s; /* For Safari 3.1 to 6.0 */

@@ -2,14 +2,12 @@
   border-radius: 25px;
   background-color: white;
   height: 60px;
-  width: 50%;
-  color: black;
   transition: height .9s ease-out;
   display: grid;
   grid-template-rows: 60px 1fr;
-  grid-template-columns: 2fr 3fr 1fr;
+  grid-template-columns: 1fr 2fr 66px;
   grid-template-areas: 
-    "logo roundBoxText collapsable"
+    "logo roundBoxTitle collapsable"
     "bullet bullet lineCollapsable"
 }
 .round.expand {
@@ -18,11 +16,13 @@
 .logo {
   grid-area: logo;
   margin: auto;
+  height: 75%;
 }
-.roundBoxText {
-  margin: auto;
-  font-size: 2em;
-  grid-area: roundBoxText;
+.roundBoxTitle {
+  margin-top: 6px;
+  text-align: left;
+  font-size: 1.5em;
+  grid-area: roundBoxTitle;
 }
 .collapsable {
   grid-area: collapsable;

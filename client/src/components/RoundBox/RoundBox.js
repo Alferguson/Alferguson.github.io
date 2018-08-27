@@ -14,7 +14,7 @@ class RoundBox extends Component {
     return ( 
       <div className={expand ? "round expand" : "round"}>
         <Pic className="logo" src="https://cdn.freebiesupply.com/logos/large/2x/nodejs-icon-logo-png-transparent.png" alt="Node.js Logo" />
-        <div className="roundBoxText">Node.JS</div>
+        <div className="roundBoxTitle">Node.js</div>
         <div className="collapsable">
           <button type="button" onClick={this.onRoundBoxClick}>
             <i className={expand ? "gear gear-rotate fas fa-cog" : "gear fas fa-cog"}></i>
