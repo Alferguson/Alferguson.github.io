@@ -4,7 +4,6 @@
   width: 100%;
   margin: 0;
   padding: 0;
-  background: #00A5CF;
   color: #1A1A1A;
   font-family: "Raleway", sans-serif;
   line-height: 2.0;
@@ -15,7 +14,7 @@ h1 {
 }
 .grid-container {
   display: grid;
-  grid-template-rows: 1fr 5fr;
+  grid-template-rows: 1fr 7fr;
   grid-template-areas: 
     "navbar"
     "body";
@@ -24,6 +23,9 @@ h1 {
 
 .navbar { 
   grid-area: navbar; 
+  margin: 0 auto;
+  background-color: #00A5CF;
+  width: 95%;
 }
 
 .body { 

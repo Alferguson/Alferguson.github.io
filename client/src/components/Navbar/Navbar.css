@@ -13,7 +13,7 @@
   height: 75%;
   -webkit-transition: 
     height 1.4s, 
-    margin-top 1.4s; /* For Safari 3.1 to 6.0 */
+    margin-top 1.4s;
   transition: 
     height 1.4s, 
     margin-top 1.4s;
@@ -35,7 +35,7 @@
   height: 85%;
   -webkit-transition: 
     height 1.4s, 
-    margin-top 1.4s; /* For Safari 3.1 to 6.0 */
+    margin-top 1.4s;
   transition: 
     height 1.4s, 
     margin-top 1.4s;
@@ -50,7 +50,7 @@
   height: 71%;
   -webkit-transition: 
     height 1.4s, 
-    margin-top 1.4s; /* For Safari 3.1 to 6.0 */
+    margin-top 1.4s;
   transition: 
     height 1.4s, 
     margin-top 1.4s;
@@ -65,7 +65,7 @@
   height: 88%;
   -webkit-transition: 
     height 1.4s, 
-    margin-top 1.4s; /* For Safari 3.1 to 6.0 */
+    margin-top 1.4s;
   transition: 
     height 1.4s, 
     margin-top 1.4s;
