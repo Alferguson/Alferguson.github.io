@@ -6,15 +6,15 @@ import { Welcome, AboutMe, CoolProjects, ContactMe, Dunno } from "./components/P
 import "./App.css";
 
 class App extends Component {
-	render() {
-		return (
+  render() {
+    return (
       <Router>
-        <div className="App grid-container">
-          <div className="navbar">
-            <Navbar className="navbar-grid" />
+        <div className="App">
+          <div className="App__navbar">
+            <Navbar />
           </div>
-          <div className="body">
-            <div className="centerBody">
+          <div className="App__body">
+            <div className="App__center">
               <Switch>
                 <Route exact path="/" component={Welcome} />
                 <Route exact path="/about-me" component={AboutMe} />
@@ -26,8 +26,8 @@ class App extends Component {
           </div>
 			  </div>
       </Router>
-		);
-	}
+    );
+  }
 }
 
 export default App;

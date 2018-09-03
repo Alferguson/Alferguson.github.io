@@ -23,12 +23,12 @@ class Navbar extends Component {
       this.setState(prevState => ({
         [targetId]: !prevState[targetId]
       }));
-    };
+    }
   };
-	render() {
-		return (
+  render() {
+    return (
       <React.Fragment>
-        <nav className={this.props.className}>
+        <nav className="navbar">
           <Nav className={this.state.firstnav ? "firstnav-expand" : "firstnav"} label="About Me" link="about-me" onClick={this.onClickNav} />
           <Nav className={this.state.secondnav ? "secondnav-expand" : "secondnav"} label="Cool Projects" link="cool-projects" onClick={this.onClickNav} />
           <Nav className={this.state.thirdnav ? "thirdnav-expand" : "thirdnav"} label="Contact Me" link="contact-me" onClick={this.onClickNav} />

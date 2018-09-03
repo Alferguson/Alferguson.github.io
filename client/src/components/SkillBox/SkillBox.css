@@ -1,16 +1,17 @@
-.round {
+.skillBox, .skillBox--expand {
   border-radius: 25px;
-  background-color: white;
-  height: 60px;
+  border: 2px solid #1A1A1A;
+  height: 40px;
   transition: height .9s ease-out;
   display: grid;
-  grid-template-rows: 60px 1fr;
-  grid-template-columns: 1fr 2fr 66px;
+  grid-template-rows: 40px 1fr;
+  grid-template-columns: 1fr 1fr 40px;
   grid-template-areas: 
     "logo roundBoxTitle collapsable"
-    "bullet bullet lineCollapsable"
+    "bullet bullet lineCollapsable";
+  gap: 2.5%;
 }
-.round.expand {
+.skillBox--expand {
   height: 220px;
 }
 .logo {
@@ -18,9 +19,8 @@
   margin: auto;
   height: 75%;
 }
-.roundBoxTitle {
-  margin-top: 6px;
-  text-align: left;
+.skillBox__title {
+  align-self: center;
   font-size: 1.5em;
   grid-area: roundBoxTitle;
 }
@@ -30,6 +30,8 @@
   display: inline-block;
 }
 .collapsable > button {
+  padding-top: 1px;
+  padding-bottom: 0;
   height: 100%;
   width: 100%;
   background-color: transparent;
@@ -45,7 +47,7 @@
   left: 0;
 }
 .gear {
-  font-size: 2.5em;
+  font-size: 1.5em;
   transition: transform .9s ease-out;  
 }
 .gear-rotate {

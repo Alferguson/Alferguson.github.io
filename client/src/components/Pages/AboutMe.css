@@ -1,14 +1,42 @@
-.two-grid {
+.aboutMe {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(2, 1fr);
+  grid-template-columns: 3fr 1fr;
   grid-template-areas:
-    "pic aboutMeText";
-  gap: 2.5%;
+    "aboutMeLeft aboutMeRight";
+  gap: 5%;
 }
-.pic {
-  grid-area: pic;
+.aboutMe__left {
+  grid-area: aboutMeLeft;
 }
-.aboutMeText {
-  grid-area: aboutMeText;
+.aboutMe__right {
+  grid-area: aboutMeRight;
+}
+.aboutMe__pic {
+  padding-top: 20px;
+  padding-right: 2.5%;
+  height: 30%;
+  width: 30%;
+  float: left;
+}
+.aboutMe__pic > img {
+  height: 100%;
+  width: 100%;
+}
+.aboutMe__title > h1, .aboutMe__right > h1  {
+  line-height: 1.5;
+  margin-top: 10px;
+}
+.aboutMe__paragraph {
+
+}
+.aboutMe--redLine {
+  background-color: #cf0053;
+  height: 20px;
+  margin-left: 32.5%;
+}
+.aboutMe--blueLine {
+  background-color: #2499b6;
+  height: 20px;
+  width: 100%;
+  margin-bottom: 20px;
 }

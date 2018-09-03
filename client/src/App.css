@@ -1,48 +1,42 @@
 .App {
-  text-align: center;
   height: 100%;
   width: 100%;
-  margin: 0;
-  padding: 0;
   color: #1A1A1A;
   font-family: "Raleway", sans-serif;
   line-height: 2.0;
-}
-h1 {
-  word-spacing: 5px;
-  letter-spacing: 2px;
-}
-.grid-container {
   display: grid;
   grid-template-rows: 1fr 7fr;
   grid-template-areas: 
     "navbar"
     "body";
-  gap: 70px;
+  gap: 50px;
+}
+h1, h2 {
+  word-spacing: 5px;
+  letter-spacing: 2px;
 }
 
-.navbar { 
+.App__navbar { 
   grid-area: navbar; 
   margin: 0 auto;
   background-color: #00A5CF;
   width: 95%;
 }
 
-.body { 
+.App__body { 
   grid-area: body; 
   display: grid;
-  grid-template-columns: repeat(8, 1fr);
+  grid-template-columns: 1fr 12fr 1fr;
   grid-template-areas:
-    ". centerBody centerBody centerBody centerBody centerBody centerBody .";
-  gap: 5px;
+    ". center .";
 }
 
-.centerBody {
-  grid-area: centerBody;
+.App__center {
+  grid-area: center;
 }
 /* to have all images scale accordingly to their grid containers */
-img {
+/* img {
   object-fit: contain;
   max-height: 100%;
   max-width: 100%;
-}
+} */
