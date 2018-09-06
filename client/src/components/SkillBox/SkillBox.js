@@ -1,34 +1,28 @@
 import React, { Component } from "react";
 import Pic from "../Pic";
+import LineArrow from "../LineArrow";
+import Bullets from "../Bullets";
 import "./SkillBox.css";
 
 class SkillBox extends Component {
   state = {
     expand: false
   };
-  onSkillBoxClick = () => {
+  onLineArrowClick = () => {
     this.setState(prev => ({ expand: !prev.expand }));
   };
   render() {
     const { expand } = this.state;
+    const { src, alt, bulletTitle, bulletsArr } = this.props;
     return ( 
       <div className={expand ? "skillBox--expand" : "skillBox"}>
-        <Pic className="logo" src="https://cdn.freebiesupply.com/logos/large/2x/nodejs-icon-logo-png-transparent.png" alt="Node.js Logo" />
-        <div className="roundBoxTitle">Node.js</div>
-        <div className="collapsable">
-          <button type="button" onClick={this.onSkillBoxClick}>
-            <i className={expand ? "gear gear-rotate fas fa-cog" : "gear fas fa-cog"}></i>
-            <svg height="100%" width="100%">
-              <circle cx="50%" cy="50%" r="10" stroke="black" strokeWidth="2" fillOpacity="0" />
-              <line x1="65.5%" y1="50%" x2="65.5%" y2="100%" stroke="black" strokeWidth="2" />
-            </svg> 
-          </button>
+        <Pic className="skillBox__logo" src={src} alt={alt} />
+        <div className="skillBox__title">{bulletTitle}</div>
+        <div className="skillBox__lineArrow" onClick={this.onLineArrowClick}>
+          <LineArrow className={expand ? "lineArrow--fold" : "lineArrow"} />
         </div>
-        <div id="bullet" className={expand ? "bullet" : "hidden"}>bullet</div>
-        <div id="line" className="lineCollapsable">
-          <svg className={expand ? "line line-expand" : "line"} width="100%">
-            <line x1="65.5%" y1="0" x2="65.5%" y2="100%" stroke="black" strokeWidth="2" />
-          </svg> 
+        <div className={expand ? "skillBox__bullet" : "skillBox__bullet--hidden"}>
+          <Bullets arr={bulletsArr} />
         </div>
       </div>
     );

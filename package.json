@@ -1,0 +1,19 @@
+{
+  "name": "alferguson.github.io",
+  "version": "1.0.0",
+  "description": "Portfolio for Alferguson",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Alferguson/Alferguson.github.io.git"
+  },
+  "author": "Alferguson",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Alferguson/Alferguson.github.io/issues"
+  },
+  "homepage": "https://github.com/Alferguson/Alferguson.github.io#readme"
+}

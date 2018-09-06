@@ -7,14 +7,14 @@
   grid-template-rows: 40px 1fr;
   grid-template-columns: 1fr 1fr 40px;
   grid-template-areas: 
-    "logo roundBoxTitle collapsable"
-    "bullet bullet lineCollapsable";
+    "logo title lineArrow"
+    "bullet bullet .";
   gap: 2.5%;
 }
 .skillBox--expand {
   height: 220px;
 }
-.logo {
+.skillBox__logo {
   grid-area: logo;
   margin: auto;
   height: 75%;
@@ -22,51 +22,20 @@
 .skillBox__title {
   align-self: center;
   font-size: 1.5em;
-  grid-area: roundBoxTitle;
+  grid-area: title;
 }
-.collapsable {
-  grid-area: collapsable;
-  position: relative;
-  display: inline-block;
+.skillBox__lineArrow {
+  grid-area: lineArrow;
+  margin: auto;
 }
-.collapsable > button {
-  padding-top: 1px;
-  padding-bottom: 0;
-  height: 100%;
-  width: 100%;
-  background-color: transparent;
-  background-repeat: no-repeat;
-  border: none;
-  cursor: pointer;
-  overflow: hidden;
-  outline: none;
+.skillBox__bullet {
+  opacity: 1;
 }
-.collapsable svg {
-  position: absolute;
-  top: 0;
-  left: 0;
+.skillBox__bullet--hidden {
+  opacity: 0;
 }
-.gear {
-  font-size: 1.5em;
-  transition: transform .9s ease-out;  
-}
-.gear-rotate {
-  transform: rotate(150deg);
+.skillBox__bullet, .skillBox__bullet--hidden {
+  grid-area: bullet;
+  transition: opacity .4s ease-in;
 }
 
-.bullet, #bullet.hidden {
-  grid-area: bullet;
-}
-.lineCollapsable, #line.hidden {
-  grid-area: lineCollapsable;
-}
-.hidden {
-  visibility: hidden;
-}
-.line {
-  height: 0;
-  transition: height .9s ease-out;  
-}
-.line.line-expand {
-  height: 160px;
-}
