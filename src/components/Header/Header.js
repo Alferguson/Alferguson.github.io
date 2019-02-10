@@ -6,7 +6,7 @@ const Header = props => {
   const [show, setShow] = useState(false);
   return (
     <div className={styles["Header"]}>
-      hey
+      {/* <NavBar /> */}
     </div>
   )
 }
