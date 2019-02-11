@@ -2,7 +2,7 @@
   "name": "client",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://alferguson.github.io/",
+  "homepage": "http://alferguson.github.io/Alferguson.github.io",
   "dependencies": {
     "gh-pages": "^2.0.1",
     "react": "^16.8.1",
