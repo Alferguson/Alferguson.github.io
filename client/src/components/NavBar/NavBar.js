@@ -14,7 +14,7 @@ const NavBar = props => {
   }
   const links = new Map([
     ["aboutme", "About Me"], 
-    ["projects", "Projects"], 
+    ["skills", "SKills"], 
     ["contact", "Contact"]
   ]);
   const linksToHTML = []; 

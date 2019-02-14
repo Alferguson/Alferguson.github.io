@@ -1,17 +1,18 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { Switch, Route } from "react-router";
 import AboutMe from "../components/AboutMe";
-import Projects from "../components/Projects";
+import Skills from "../components/Skills";
 import Contact from "../components/Contact";
-import PropTypes from 'prop-types';
+import Transistion from "../components/Transistion";
 
 const BodyRoutes = props => {
   return (
     <Switch>
-      <Route exact path="/" component={AboutMe}/>
-      <Route exact path="/aboutMe" component={AboutMe}/>
-      <Route exact path="/projects" component={Projects}/>
-      <Route exact path="/contact" component={Contact}/>
+      <Route exact path="/" render={ () => <Transistion><AboutMe /></Transistion>}/>
+      <Route exact path="/aboutMe" render={ () => <Transistion><AboutMe /></Transistion>}/>
+      <Route exact path="/skills" render={ () => <Transistion><Skills /></Transistion>}/>
+      <Route exact path="/contact" render={ () => <Transistion><Contact /></Transistion>}/>
     </Switch>
   )
 }
