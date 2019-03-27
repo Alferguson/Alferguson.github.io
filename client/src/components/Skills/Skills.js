@@ -8,7 +8,7 @@ const Skills = props => {
     <>
     {Object.entries(skillsText).map( (arr, i) => (
       <div className={styles.skills} key={arr[0]}>
-        <div style={{ margin: "20px" }} className="left">
+        <div style={{ margin: "auto" }} className="left">
           {i % 2 === 0 ? (
             <ul>
               {arr[1].desc.map( des => (<li><p key={des}>{des}</p></li>))}
@@ -17,9 +17,10 @@ const Skills = props => {
             <div className={styles.pictureText}>
               <h2>{arr[0]}</h2>
               <img className={styles.pic} src={arr[1].pic} alt="dymanic" />
-            </div>          )}
+            </div>
+          )}
         </div>
-        <div style={{ margin: "20px" }} className="right">
+        <div style={{ margin: "auto" }} className="right">
           {i % 2 === 0 ? (
             <div className={styles.pictureText}>
               <h2>{arr[0]}</h2>

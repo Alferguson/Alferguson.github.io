@@ -33,7 +33,7 @@ export const skillsText = {
     desc: [
       "My main Front-End Framework, fluent in JSX",
       "Extremely familiar with lifecycles, stateful vs dumb components, HOCs, prop delagation, speed increase with arrays convert to objects",
-      "Strong understanding of React-Router, Jest, api calls via Axios, Webpack, Babel, and Server-side rendering",
+      "Strong understanding of React-Router, Jest, API calls via Axios, Webpack, Babel, and Server-side rendering",
       "Just started using Hooks, I believe they are a little harder to pick up at first but having the ability to encapsulate state is extremeley useful",
       "I love react"
     ],
