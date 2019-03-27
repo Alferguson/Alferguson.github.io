@@ -12,6 +12,7 @@ export const AboutMeText = props => {
         with Express for most of my APIs and server-rendering. I have dabbled with Golang and I translate C# apps to Node.js
         a lot too. One of my main goals is to understand WebAssembly since it seems to be a game changer.
       </p>
+      <p><a href={"../../assets/jafResume.pdf"} download>Download my Resume (PDF)</a></p>
     </div>
   )
 }
