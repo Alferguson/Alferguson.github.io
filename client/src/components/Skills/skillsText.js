@@ -42,7 +42,7 @@ export const skillsText = {
   Redux: {
     desc: [
       "Use Redux for larger apps, understanding of immutable store",
-      "Familiar with React-Thunk for async calls, has also used Redux-Saga as well"
+      "Familiar with React-Thunk for async calls, has also used Redux-Saga"
     ],
     pic: reduxLogo
   },
