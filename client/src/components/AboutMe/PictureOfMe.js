@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types';
-import pic from "./jermany_pic.jpg";
+import pic from "../../assets/PictureOfMeAlex.jpg";
 import styles from "./PictureOfMe.module.css";
 
 export const PictureOfMe = props => {
