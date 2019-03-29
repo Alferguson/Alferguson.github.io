@@ -1,20 +1,25 @@
-import React, { Component } from 'react';
+import React from 'react';
+import { useEventListener } from "./hooks/useEventListener";
 import NavBar from "./components/NavBar";
 import BodyRoutes from "./routes";
 import { BrowserRouter as Router } from 'react-router-dom';
 import styles from "./App.module.css";
 
-class App extends Component {
-  render() {
-    return (
-      <Router>
-        <div className={styles.mainContent}>
-          <NavBar />
-          <BodyRoutes />
-        </div>
-      </Router>
-    );
-  }
+const App = () => {
+  useEventListener("scroll", e => {
+    const scrolled = window.pageYOffset;
+    const background = document.querySelector("#background");
+    background.style.top = - (scrolled * 0.2) + "px";
+  })
+
+  return (
+    <Router>
+      <div id="background" className={styles.mainContent}>
+        <NavBar />
+        <BodyRoutes />
+      </div>
+    </Router>
+  );
 }
 
 export default App;
