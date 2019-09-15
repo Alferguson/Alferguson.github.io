@@ -1,8 +1,0 @@
-.transistion {
-  animation: longFadeIn 7s;
-}
-
-@keyframes longFadeIn {
-  from { opacity: 0; }
-  to   { opacity: 1; }
-}

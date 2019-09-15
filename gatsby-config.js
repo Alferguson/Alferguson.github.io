@@ -8,7 +8,6 @@ module.exports = {
       twitter: `alferguson_JS`
     }
   },
-  pathPrefix: "/portfolio",
   plugins: [
     {
       resolve: `gatsby-source-filesystem`,
