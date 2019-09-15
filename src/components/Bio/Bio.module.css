@@ -1,0 +1,9 @@
+.bio {
+  display: flex;
+  margin-bottom: 4.325rem;
+  flex-flow: column wrap;
+}
+
+.bio>div:first-child {
+  display: flex;
+}
