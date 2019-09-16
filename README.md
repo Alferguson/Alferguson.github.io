@@ -1,4 +1,4 @@
-# John Alexander Portfolio
+# John Alexander Ferguson Portfolio
 
 This Portfolio was bootstrapped with the [Gatsby Starter Blog](https://github.com/gatsbyjs/gatsby-starter-blog).
 

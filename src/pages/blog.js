@@ -4,7 +4,7 @@ import PageTemplate from "../components/PageTemplate";
 import SEO from "../components/seo";
 import { rhythm } from "../utils/typography";
 
-const BlogIndex = props => {
+const Blog = props => {
   const { data } = props;
   const siteTitle = data.site.siteMetadata.title;
   const posts = data.allMarkdownRemark.edges;
@@ -26,6 +26,7 @@ const BlogIndex = props => {
               </Link>
             </h3>
             <small>{node.frontmatter.date}</small>
+            {/* TODO: check for alts for using dangerouslySetInnerHTML */}
             <p
               dangerouslySetInnerHTML={{
                 __html: node.frontmatter.description || node.excerpt
@@ -38,7 +39,7 @@ const BlogIndex = props => {
   );
 };
 
-export default BlogIndex;
+export default Blog;
 
 export const pageQuery = graphql`
   query {

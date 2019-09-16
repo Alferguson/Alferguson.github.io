@@ -1,5 +1,9 @@
 :root {
-  --zune-background: linear-gradient(to right, #f15b2a 0, #e80a89 70%, #426bf4 100%);
+  --zune-background: linear-gradient(to right, #f15b2a 0, #e80a89 50%, #426bf4 100%);
+  --zune-background-animate: linear-gradient(to right, #f15b2a 0, #e80a89 25%, #426bf4 50%, #e80a89 75%, #f15b2a 100%);
+  --zune-background-orange: #F1572F;
+  --zune-background-pink-red: #E60C8B;
+  --zune-background-purple-blue: #5064EC;
 }
 
 body {
@@ -40,7 +44,7 @@ body {
 .pageTemp>header>hr {
   background: var(--zune-background);
   height: 10px;
-  margin-left: 5%;
+  margin: 0 0 0 5%;
 }
 
 /* NavBar occupies left grid (basically a sidebar) */

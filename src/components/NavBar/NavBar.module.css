@@ -1,7 +1,61 @@
+.navbar {
+  margin-left: 5%;
+}
+
 .navbar>ul {
   display: flex;
-  flex-flow: column nowrap;
   justify-content: space-between;
-  font-family: 'Slabo 27px', serif;
   font-size: 1.2rem;
+  font-family: 'Slabo 27px', serif;
+  height: 100%;
+  /* to remove native bullets */
+  list-style-type: none;
+}
+
+/* Link Container */
+.navbar>ul>li {}
+
+/* Links (anchor tags) */
+.navbar>ul>li>a {
+  text-decoration: none;
+  font-size: 1.4rem;
+}
+
+/* have sick animation for hovering */
+.navbar>ul>li>a>p:hover {
+  animation: textGradientHover 1.75s ease infinite;
+  background: var(--zune-background);
+  /* inspired by https://codepen.io/P1N2O/pen/pyBNzX */
+  background-size: 500% 500%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* First Link */
+.navbar>ul>li:first-child>a {
+  color: var(--zune-background-orange);
+}
+
+/* Middle Link */
+.navbar>ul>li:nth-child(2)>a {
+  color: var(--zune-background-pink-red);
+}
+
+/* Last Link */
+.navbar>ul>li:last-child>a {
+  color: var(--zune-background-purple-blue);
+}
+
+@keyframes textGradientHover {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
 }

@@ -1,26 +1,31 @@
 import React from "react";
-import PropTypes from "prop-types";
 import { Link } from "gatsby";
 import styles from "./NavBar.module.css";
 
-const NavBar = props => {
+const NavBar = ({ location }) => {
+  const { pathname } = location;
+
   return (
     <nav className={styles.navbar}>
       <ul>
         <li>
-          <Link to="/">Home</Link>
+          <Link to="/">
+            <p>Home</p>
+          </Link>
         </li>
         <li>
-          <Link to="contact">Contact</Link>
+          <Link to="/contact/">
+            <p>Contact</p>
+          </Link>
         </li>
         <li>
-          <Link to="blog">Blog!</Link>
+          <Link to="/blog/">
+            <p>Blog!</p>
+          </Link>
         </li>
       </ul>
     </nav>
   );
 };
-
-NavBar.propTypes = {};
 
 export default NavBar;

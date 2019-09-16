@@ -4,16 +4,17 @@ import Bio from "../components/Bio";
 import SEO from "../components/seo";
 import PageTemplate from "../components/PageTemplate";
 
-const BlogIndex = () => {
+const Index = props => {
+  const siteTitle = props.data.site.siteMetadata.title;
   return (
-    <PageTemplate>
+    <PageTemplate location={props.location} title={siteTitle}>
       <SEO title="Home" />
       <Bio />
     </PageTemplate>
   );
 };
 
-export default BlogIndex;
+export default Index;
 
 export const pageQuery = graphql`
   query {

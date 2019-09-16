@@ -3,7 +3,7 @@ module.exports = {
     title: `John Alexander Ferguson's Portfolio`,
     author: `John Alexander Ferguson`,
     description: `Portfolio for John Alexander Ferguson, a Software Engineer with an emphasis in Front-End Technologies`,
-    siteUrl: `https://gatsby-starter-blog-demo.netlify.com/`,
+    siteUrl: `https://alferguson.github.io/`,
     social: {
       twitter: `alferguson_JS`
     }
