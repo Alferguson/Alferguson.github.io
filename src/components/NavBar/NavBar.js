@@ -9,19 +9,13 @@ const NavBar = ({ location }) => {
     <nav className={styles.navbar}>
       <ul>
         <li>
-          <Link to="/">
-            <p>Home</p>
-          </Link>
+          <Link to="/">Home</Link>
         </li>
         <li>
-          <Link to="/contact/">
-            <p>Contact</p>
-          </Link>
+          <Link to="/contact/">Contact</Link>
         </li>
         <li>
-          <Link to="/blog/">
-            <p>Blog!</p>
-          </Link>
+          <Link to="/blog/">Blog</Link>
         </li>
       </ul>
     </nav>
