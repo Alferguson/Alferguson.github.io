@@ -1,19 +1,30 @@
 {
-  "name": "alferguson.github.io",
-  "version": "1.0.0",
-  "description": "Portfolio for Alferguson",
-  "main": "index.js",
+  "name": "client",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@mdx-js/mdx": "^1.5.8",
+    "@mdx-js/react": "^1.5.8",
+    "gatsby": "^2.20.25",
+    "gatsby-plugin-mdx": "^1.1.9",
+    "gatsby-plugin-react-helmet": "^3.2.4",
+    "gatsby-source-filesystem": "^2.2.4",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-helmet": "^6.0.0",
+    "react-router-dom": "^5.1.2",
+    "react-scripts": "^3.4.1"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Alferguson/Alferguson.github.io.git"
-  },
-  "author": "Alferguson",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/Alferguson/Alferguson.github.io/issues"
-  },
-  "homepage": "https://github.com/Alferguson/Alferguson.github.io#readme"
+  "devDependencies": {
+    "cross-env": "^7.0.2",
+    "eslint": "^6.8.0",
+    "eslint-plugin-react": "^7.19.0",
+    "prettier": "^2.0.4"
+  }
 }
