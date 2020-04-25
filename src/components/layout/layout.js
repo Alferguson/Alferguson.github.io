@@ -1,12 +1,9 @@
 import React from "react";
-import Navbar from "../NavBar";
-import styles from "./PageTemplate.module.css";
-import "typeface-slabo-27px";
-import "typeface-staatliches";
+import styles from "./layout.module.css";
 
 // Wraps every page with header, navbar, and footer
 // Main contains actual page components
-const PageTemplate = props => {
+const Layout = props => {
   const { children, location, title } = props;
 
   return (
@@ -14,7 +11,7 @@ const PageTemplate = props => {
       <header>
         <h1>John Alexander Ferguson</h1>
         <hr></hr>
-        <Navbar location={location} title={title} />
+        {/* <Navbar location={location} title={title} /> */}
       </header>
       <main>{children}</main>
       <footer>
@@ -26,4 +23,4 @@ const PageTemplate = props => {
   );
 };
 
-export default PageTemplate;
+export default Layout;

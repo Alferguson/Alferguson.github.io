@@ -11,6 +11,14 @@ module.exports = {
   plugins: [
     'gatsby-plugin-react-helmet',
     {
+      resolve: 'gatsby-plugin-mdx',
+      options: {
+        defaultLayouts: {
+          default: require.resolve('./src/components/BlogTemplate'),
+        },
+      },
+    },
+    {
       resolve: `gatsby-source-filesystem`,
       options: {
         path: `${__dirname}/posts`,

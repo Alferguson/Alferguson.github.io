@@ -1,4 +1,0 @@
-export * from "./AboutMe";
-export * from "./ContactMe";
-export * from "./CoolProjects";
-export * from "./Dunno";
