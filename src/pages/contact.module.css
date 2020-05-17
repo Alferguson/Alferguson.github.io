@@ -1,0 +1,57 @@
+.formLabel {
+  display: grid;
+  flex-direction: column;
+}
+
+.formInput {
+  background: transparent;
+  border: 0;
+  border-bottom: 2px solid red;
+  color: blue;
+  outline: 0;
+  padding: 7px 0;
+  transition: border-color 0.2s;
+  width: 50%;
+
+  /* &::placeholder {
+    color: transparent;
+  } */
+
+  /* &:placeholder-shown ~ .form__label {
+    font-size: 1.3rem;
+    cursor: text;
+    top: 20px;
+  } */
+}
+
+.formLabel {
+  color: yellow;
+  display: block;
+  font-size: 1rem;
+  position: absolute;
+  transition: 0.2s;
+  top: 0;
+}
+
+.formInput:focus {
+  padding-bottom: 6px;
+  font-weight: 700;
+  border-width: 3px;
+  border-image: linear-gradient(to right, $primary, $secondary);
+  border-image-slice: 1;
+}
+
+.formLabel {
+  position: absolute;
+  top: 0;
+  display: block;
+  transition: 0.2s;
+  font-size: 1rem;
+  color: $primary;
+  font-weight: 700;
+}
+
+/* reset input
+.formField{
+  &:required,&:invalid { box-shadow:none; }
+} */

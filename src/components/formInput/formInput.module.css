@@ -1,0 +1,36 @@
+/* position relative to have label move around freely */
+.formInputContainer {
+  position: relative;
+  height: 100px;
+  width: 50%;
+}
+
+/* absolute to allow free movement */
+.formLabel {
+  position: absolute;
+  top: 5px;
+  transition: 0.2s;
+}
+
+.formInput {
+  /* remove standard input css */
+  background: transparent;
+  border: 0;
+  border-bottom: 2px solid red;
+  color: red;
+  outline: 0;
+  margin-top: 10px;
+}
+
+/* hide placeholder text so placeholder doesn't conflict with input label */
+.formInput::placeholder {
+  color: transparent;
+}
+
+/* move label up with smooth animation when input is focused */
+/* move label up with smooth animation when input has text (fixes if user clicks something outside of targeted form input) */
+.formInput:focus ~ .formLabel,
+.formInput:not(:placeholder-shown) ~ .formLabel {
+  transition: 0.2s;
+  top: -10px;
+}

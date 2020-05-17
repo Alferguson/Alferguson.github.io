@@ -4,17 +4,14 @@ import NavBar from "../navbar";
 
 // Wraps every page with header, navbar, and footer
 // Main contains actual page components
-const Layout = (props) => {
-  const { children, location, title } = props;
-
+const Layout = ({ children, location, title }) => {
   return (
     <div className={styles.layout}>
       <header>
         <h1>John Alexander Ferguson</h1>
-        <hr></hr>
-        {/* <Navbar location={location} title={title} /> */}
+        <h3>full stack web developer</h3>
       </header>
-      <div>
+      <div className={styles.navAndMain}>
         <NavBar />
         <main>{children}</main>
       </div>

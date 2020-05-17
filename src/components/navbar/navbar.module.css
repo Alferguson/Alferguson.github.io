@@ -1,0 +1,29 @@
+/* remove bullets from list */
+.navBar > ul {
+  height: 200px;
+  list-style-type: none;
+  align-items: center;
+}
+
+/* put space between nav components */
+.navBar > ul {
+  display: grid;
+  flex-direction: column;
+}
+
+/* Remove underline for links */
+.navBar > ul > li > a {
+  text-decoration: none;
+}
+
+/* Remove margining from header tags within label */
+.navBarLabel > h3,
+.navBarLabel > h6 {
+  color: var(--white-color);
+  margin: 0;
+}
+
+.navBarLabel > h6 {
+  margin-left: 2em;
+  color: grey;
+}

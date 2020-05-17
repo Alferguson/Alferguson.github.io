@@ -9,14 +9,14 @@ module.exports = {
     }
   },
   plugins: [
-    'gatsby-plugin-react-helmet',
+    "gatsby-plugin-react-helmet",
     {
-      resolve: 'gatsby-plugin-mdx',
+      resolve: "gatsby-plugin-mdx",
       options: {
         defaultLayouts: {
-          default: require.resolve('./src/components/BlogTemplate'),
-        },
-      },
+          default: require.resolve("./src/components/layout")
+        }
+      }
     },
     {
       resolve: `gatsby-source-filesystem`,
@@ -31,6 +31,6 @@ module.exports = {
         path: `${__dirname}/assets`,
         name: `assets`
       }
-    },
+    }
   ]
 };
