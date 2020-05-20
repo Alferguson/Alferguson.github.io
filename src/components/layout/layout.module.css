@@ -100,6 +100,12 @@ p {
   font-size: 1.2rem;
 }
 
+header {
+  justify-self: center;
+  align-self: center;
+  width: 20%;
+}
+
 /* center content with 80% of width, and display header, main, and footer in 3 rows */
 .layout {
   display: grid;
@@ -109,35 +115,47 @@ p {
   width: 100%;
 }
 
-header {
-  width: 80%;
-  justify-self: center;
-}
-
 /* reduce margining on header text and apply Zune gradient to text */
 /* NOTE: Gradient is applied according to the container and not the actual text width */
-.layout > header > h1 {
+.layout > header > h3 {
   background: var(--zune-background);
   background-clip: text;
   color: transparent;
-  margin-bottom: 1rem;
+  margin: 0;
+  font-size: 1.5em;
 }
 
-.layout > header > h3 {
+.layout > header > h6 {
   text-align: right;
+  margin: 0;
 }
 
-.navAndMain {
-  display: flex;
-}
-
-.navAndMain > main {
-  margin-left: 100px;
+.layout > main {
+  margin-left: 200px;
 }
 
 footer {
   text-align: right;
   margin-right: 20px;
+}
+
+.topLeftNav,
+.centerNav {
+  position: fixed;
+  /* transform: translateX(40vw) translateY(30vh) scale(1.5); */
+  transform-origin: top center;
+  transition: 0.5s all ease-in-out;
+  left: 0;
+}
+
+/* move navBar to top left and scale it down */
+.topLeftNav {
+  /* transform: translateX(0) translateY(-75px) scale(4); */
+}
+
+.topLeftNav > nav,
+.centerNav > nav {
+  transition: 0.5s all ease-in-out;
 }
 
 /* mobile viewport */

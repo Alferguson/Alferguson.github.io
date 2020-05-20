@@ -11,6 +11,12 @@ module.exports = {
   plugins: [
     "gatsby-plugin-react-helmet",
     {
+      resolve: "gatsby-plugin-transition-link",
+      options: {
+        layout: require.resolve(`./src/components/layout`)
+      }
+    },
+    {
       resolve: "gatsby-plugin-mdx",
       options: {
         defaultLayouts: {

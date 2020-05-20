@@ -2,9 +2,11 @@ import React from "react";
 import Layout from "../components/layout";
 import styles from "./about.module.css";
 
-export default () => {
+export default ({ transitionStatus, entry, exit }) => {
+  // console.log(transitionStatus, entry, exit);
+
   return (
-    <Layout>
+    <>
       <section className={styles.aboutSection}>
         <h3 className={styles.aboutHeader}>About Me</h3>
         <p>
@@ -102,6 +104,6 @@ export default () => {
           and having comradery as a team.
         </p>
       </section>
-    </Layout>
+    </>
   );
 };

@@ -1,8 +1,15 @@
 import React from "react";
 import { Link } from "gatsby";
+import AniLink from "gatsby-plugin-transition-link/AniLink";
+
+// import TransitionLink from "gatsby-plugin-transition-link";
 import styles from "./navbar.module.css";
 
-const NavBarLabel = ({ upperText, lowerText, isSplash = false }) => {
+// check path to either show link or not
+const checkPath = (p, matchPath) =>
+  p === matchPath || p === "/" ? true : false;
+
+const NavBarLabel = ({ upperText, lowerText }) => {
   return (
     <span className={styles.navBarLabel}>
       <h3>{upperText}</h3>
@@ -12,23 +19,34 @@ const NavBarLabel = ({ upperText, lowerText, isSplash = false }) => {
 };
 
 const NavBar = () => {
+  const path = window.location.pathname;
+  console.log(path);
   return (
     <nav className={styles.navBar}>
       <ul>
-        <li>
-          <Link to="/about/">
+        <li
+          className={
+            checkPath(path, "/about/") ? styles.showLink : styles.hideLink
+          }>
+          <AniLink fade to={path === "/about/" ? "/" : "/about/"}>
             <NavBarLabel upperText="about" lowerText="me" />
-          </Link>
+          </AniLink>
         </li>
-        <li>
-          <Link to="/blog/">
+        <li
+          className={
+            checkPath(path, "/blog/") ? styles.showLink : styles.hideLink
+          }>
+          <AniLink fade to={path === "/blog/" ? "/" : "/blog/"}>
             <NavBarLabel upperText="blog" lowerText="posts" />
-          </Link>
+          </AniLink>
         </li>
-        <li>
-          <Link to="/contact/">
+        <li
+          className={
+            checkPath(path, "/contact/") ? styles.showLink : styles.hideLink
+          }>
+          <AniLink fade to={path === "/contact/" ? "/" : "/contact/"}>
             <NavBarLabel upperText="contact" lowerText="me" />
-          </Link>
+          </AniLink>
         </li>
       </ul>
     </nav>

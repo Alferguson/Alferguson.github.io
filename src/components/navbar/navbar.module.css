@@ -1,14 +1,12 @@
 /* remove bullets from list */
-.navBar > ul {
-  height: 200px;
-  list-style-type: none;
-  align-items: center;
-}
-
 /* put space between nav components */
+
 .navBar > ul {
   display: grid;
   flex-direction: column;
+  height: 200px;
+  list-style-type: none;
+  margin: 0;
 }
 
 /* Remove underline for links */
@@ -27,3 +25,24 @@
   margin-left: 2em;
   color: grey;
 }
+
+/* START OF SHOW/HIDE LINK */
+/* desc: show/hide link by using visibility and opacity CSS properties with transition property */
+/* ================================================== */
+.showLink,
+.hideLink {
+  transition: visibility 0.3s linear, opacity 0.3s linear;
+}
+
+.showLink {
+  opacity: 1;
+  visibility: visible;
+}
+
+.hideLink {
+  opacity: 0;
+  visibility: hidden;
+}
+
+/* ================================================== */
+/* END OF SHOW/HIDE LINK */

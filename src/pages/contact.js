@@ -9,7 +9,7 @@ export default () => {
   const [message, setMessage] = useState("");
 
   return (
-    <Layout>
+    <>
       <h2>Hit me up</h2>
       <form>
         <FormInput placeholder="Name" value={name} setValue={setName} />
@@ -23,6 +23,6 @@ export default () => {
 
         <button type="submit">Send to me</button>
       </form>
-    </Layout>
+    </>
   );
 };

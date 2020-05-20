@@ -7,10 +7,10 @@ export default () => {
   const posts = usePosts();
   console.log(posts);
   return (
-    <Layout>
+    <>
       {posts.map((post) => (
         <PostPreview key={post.slug} post={post} />
       ))}
-    </Layout>
+    </>
   );
 };
