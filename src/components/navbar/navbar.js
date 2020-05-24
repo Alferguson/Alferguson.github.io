@@ -1,8 +1,5 @@
 import React from "react";
-import { Link } from "gatsby";
 import AniLink from "gatsby-plugin-transition-link/AniLink";
-
-// import TransitionLink from "gatsby-plugin-transition-link";
 import styles from "./navbar.module.css";
 
 // check path to either show link or not
@@ -10,17 +7,24 @@ const checkPath = (p, matchPath) =>
   p === matchPath || p === "/" ? true : false;
 
 const NavBarLabel = ({ upperText, lowerText }) => {
+  const path = window.location.pathname;
   return (
     <span className={styles.navBarLabel}>
       <h3>{upperText}</h3>
-      <h6>{lowerText.toUpperCase()}</h6>
+      <h6
+        className={
+          path === `/${upperText}/`
+            ? styles.hideSmallHeader
+            : styles.showSmallHeader
+        }>
+        {lowerText.toUpperCase()}
+      </h6>
     </span>
   );
 };
 
 const NavBar = () => {
   const path = window.location.pathname;
-  console.log(path);
   return (
     <nav className={styles.navBar}>
       <ul>

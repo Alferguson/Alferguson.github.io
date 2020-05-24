@@ -26,6 +26,15 @@ Based off of Microsoft's Metro Language */
   src: url("../../../static/fonts/ZegoeUISemiBold-U.ttf") format("truetype"); /* Safari, Android, iOS */
 }
 
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 :root {
   /* TODO, fix width percentages */
   --zune-background: linear-gradient(
@@ -46,6 +55,7 @@ Based off of Microsoft's Metro Language */
   --zune-background-pink-red: #e60c8b;
   --zune-background-purple-blue: #5064ec;
   --white-color: #fcf5f5;
+  --fade-time: 2s;
 }
 
 html {
@@ -98,6 +108,7 @@ h6 {
 
 p {
   font-size: 1.2rem;
+  line-height: 1.3;
 }
 
 header {
@@ -108,6 +119,7 @@ header {
 
 /* center content with 80% of width, and display header, main, and footer in 3 rows */
 .layout {
+  animation: fadeIn ease var(--fade-time);
   display: grid;
   /* display 3 rows, header of 100px, body of min of the view width and max of 6fr, and footer 1fr */
   grid-template-rows: 20vh minmax(75vh, auto) 5vh;
@@ -139,22 +151,13 @@ footer {
   margin-right: 20px;
 }
 
+/* allow navbar to move freely between center of page and top left */
 .topLeftNav,
 .centerNav {
-  position: fixed;
-  /* transform: translateX(40vw) translateY(30vh) scale(1.5); */
-  transform-origin: top center;
-  transition: 0.5s all ease-in-out;
+  animation: fadeIn ease var(--fade-time);
   left: 0;
-}
-
-/* move navBar to top left and scale it down */
-.topLeftNav {
-  /* transform: translateX(0) translateY(-75px) scale(4); */
-}
-
-.topLeftNav > nav,
-.centerNav > nav {
+  position: fixed;
+  transform-origin: top center;
   transition: 0.5s all ease-in-out;
 }
 

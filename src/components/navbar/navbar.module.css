@@ -4,7 +4,7 @@
 .navBar > ul {
   display: grid;
   flex-direction: column;
-  height: 200px;
+  height: 250px;
   list-style-type: none;
   margin: 0;
 }
@@ -24,6 +24,22 @@
 .navBarLabel > h6 {
   margin-left: 2em;
   color: grey;
+}
+
+.showSmallHeader,
+.hideSmallHeader {
+  transition: visibility 0.3s linear, opacity 0.3s linear;
+}
+
+.showSmallHeader {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* hide small text underneath NavBarLabel's header if in top left corner */
+.hideSmallHeader {
+  opacity: 0;
+  visibility: hidden;
 }
 
 /* START OF SHOW/HIDE LINK */

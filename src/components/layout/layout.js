@@ -10,9 +10,9 @@ const determineYMovement = (path) => {
     case "/about/":
       return { transform: `translateX(70px) translateY(-75px) scale(4)` };
     case "/blog/":
-      return { transform: `translateX(70px) translateY(-325px) scale(4)` };
+      return { transform: `translateX(70px) translateY(-400px) scale(4)` };
     case "/contact/":
-      return { transform: `translateX(70px) translateY(-600px) scale(4)` };
+      return { transform: `translateX(70px) translateY(-735px) scale(4)` };
     default:
       console.error("Path does not exist");
       return { transform: `translateX(40vw) translateY(30vh) scale(1.5)` };
