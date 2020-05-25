@@ -1,5 +1,5 @@
 import React from "react";
-import AniLink from "gatsby-plugin-transition-link/AniLink";
+import TransitionLink from "gatsby-plugin-transition-link";
 import styles from "./navbar.module.css";
 
 // check path to either show link or not
@@ -32,25 +32,28 @@ const NavBar = () => {
           className={
             checkPath(path, "/about/") ? styles.showLink : styles.hideLink
           }>
-          <AniLink fade to={path === "/about/" ? "/" : "/about/"}>
+          <TransitionLink
+            entry={{ delay: path === "/about/" ? 0.5 : 0 }} // seconds, has to match about.module.css fadeout time
+            exit={{ length: path === "/about/" ? 0.5 : 0 }} // seconds, has to match about.module.css fadeout time
+            to={path === "/about/" ? "/" : "/about/"}>
             <NavBarLabel upperText="about" lowerText="me" />
-          </AniLink>
+          </TransitionLink>
         </li>
         <li
           className={
             checkPath(path, "/blog/") ? styles.showLink : styles.hideLink
           }>
-          <AniLink fade to={path === "/blog/" ? "/" : "/blog/"}>
+          <TransitionLink to={path === "/blog/" ? "/" : "/blog/"}>
             <NavBarLabel upperText="blog" lowerText="posts" />
-          </AniLink>
+          </TransitionLink>
         </li>
         <li
           className={
             checkPath(path, "/contact/") ? styles.showLink : styles.hideLink
           }>
-          <AniLink fade to={path === "/contact/" ? "/" : "/contact/"}>
+          <TransitionLink to={path === "/contact/" ? "/" : "/contact/"}>
             <NavBarLabel upperText="contact" lowerText="me" />
-          </AniLink>
+          </TransitionLink>
         </li>
       </ul>
     </nav>

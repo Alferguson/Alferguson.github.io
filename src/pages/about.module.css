@@ -25,7 +25,7 @@
 }
 
 .fadeOut {
-  animation: fadeOut ease var(--fade-time);
+  animation: fadeOut ease 0.5s;
 }
 
 .aboutHeader {
