@@ -33,8 +33,8 @@ const NavBar = () => {
             checkPath(path, "/about/") ? styles.showLink : styles.hideLink
           }>
           <TransitionLink
-            entry={{ delay: path === "/about/" ? 0.5 : 0 }} // seconds, has to match about.module.css fadeout time
-            exit={{ length: path === "/about/" ? 0.5 : 0 }} // seconds, has to match about.module.css fadeout time
+            entry={{ delay: path === "/about/" ? 0.5 : 0 }} // seconds, has to match layout/animation.css fadeout time
+            exit={{ length: path === "/about/" ? 0.5 : 0 }} // seconds, has to match layout/animation.css fadeout time
             to={path === "/about/" ? "/" : "/about/"}>
             <NavBarLabel upperText="about" lowerText="me" />
           </TransitionLink>
@@ -43,7 +43,10 @@ const NavBar = () => {
           className={
             checkPath(path, "/blog/") ? styles.showLink : styles.hideLink
           }>
-          <TransitionLink to={path === "/blog/" ? "/" : "/blog/"}>
+          <TransitionLink
+            entry={{ delay: path === "/blog/" ? 0.5 : 0 }} // seconds, has to match layout/animation.css fadeout time
+            exit={{ length: path === "/blog/" ? 0.5 : 0 }} // seconds, has to match layout/animation.css fadeout time
+            to={path === "/blog/" ? "/" : "/blog/"}>
             <NavBarLabel upperText="blog" lowerText="posts" />
           </TransitionLink>
         </li>
@@ -51,7 +54,10 @@ const NavBar = () => {
           className={
             checkPath(path, "/contact/") ? styles.showLink : styles.hideLink
           }>
-          <TransitionLink to={path === "/contact/" ? "/" : "/contact/"}>
+          <TransitionLink
+            entry={{ delay: path === "/contact/" ? 0.5 : 0 }} // seconds, has to match layout/animation.css fadeout time
+            exit={{ length: path === "/contact/" ? 0.5 : 0 }} // seconds, has to match layout/animation.css fadeout time
+            to={path === "/contact/" ? "/" : "/contact/"}>
             <NavBarLabel upperText="contact" lowerText="me" />
           </TransitionLink>
         </li>
