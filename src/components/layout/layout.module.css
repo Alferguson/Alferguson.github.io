@@ -54,7 +54,10 @@ Based off of Microsoft's Metro Language */
   --zune-background-orange: #f1572f;
   --zune-background-pink-red: #e60c8b;
   --zune-background-purple-blue: #5064ec;
+  --black-color: #00000b;
   --white-color: #fcf5f5;
+  --grey-color: grey;
+  --red-color: #fc3900;
   --fade-time: 2s;
 }
 
@@ -83,26 +86,32 @@ body {
 }
 
 h1 {
+  font-family: "ZegoeLight", sans-serif;
   font-size: 4rem;
 }
 
 h2 {
+  font-family: "ZegoeLight", sans-serif;
   font-size: 3rem;
 }
 
 h3 {
+  font-family: "ZegoeLight", sans-serif;
   font-size: 2rem;
 }
 
 h4 {
+  font-family: "ZegoeLight", sans-serif;
   font-size: 1rem;
 }
 
 h5 {
+  font-family: "ZegoeLight", sans-serif;
   font-size: 0.9rem;
 }
 
 h6 {
+  font-family: "ZegoeLight", sans-serif;
   font-size: 0.75rem;
 }
 

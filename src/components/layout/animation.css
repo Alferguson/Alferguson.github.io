@@ -23,3 +23,8 @@
 .fadeOut {
   animation: fadeOut ease 0.5s;
 }
+
+/* FIX for scroll bar showing in contact page */
+.tl-edges {
+  overflow: visible;
+}

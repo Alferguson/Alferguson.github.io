@@ -12,8 +12,8 @@ export default () => {
         <section
           className={`
               ${styles.aboutSection} 
-              ${transitionStatus === "entering" && "fadeIn"} 
-              ${transitionStatus === "exiting" && "fadeOut"}
+              ${transitionStatus === "entering" ? "fadeIn" : ""} 
+              ${transitionStatus === "exiting" ? "fadeOut" : ""}
             `}>
           <h3 className={styles.aboutHeader}>About Me</h3>
           <p>

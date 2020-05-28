@@ -12,8 +12,8 @@ export default () => {
       {({ transitionStatus }) => (
         <section
           className={`
-             ${transitionStatus === "entering" && "fadeIn"} 
-             ${transitionStatus === "exiting" && "fadeOut"}
+             ${transitionStatus === "entering" ? "fadeIn" : ""} 
+             ${transitionStatus === "exiting" ? "fadeOut" : ""}
            `}>
           {posts.map((post) => (
             <PostPreview key={post.slug} post={post} />

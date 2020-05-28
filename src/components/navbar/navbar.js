@@ -10,7 +10,14 @@ const NavBarLabel = ({ upperText, lowerText }) => {
   const path = window.location.pathname;
   return (
     <span className={styles.navBarLabel}>
-      <h3>{upperText}</h3>
+      <h3
+        className={
+          path === `/${upperText}/`
+            ? styles.greyBigHeader
+            : styles.whiteBigHeader
+        }>
+        {upperText}
+      </h3>
       <h6
         className={
           path === `/${upperText}/`

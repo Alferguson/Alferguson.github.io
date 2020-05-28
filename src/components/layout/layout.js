@@ -26,6 +26,7 @@ const Layout = ({ children, path, location, title }) => {
   return (
     <>
       <div className={styles.layout}>
+        {/* header fades in on initial load for index page and fades out for other page transitions */}
         <header
           className={path == "/" ? "fadeIn" : "fadeOut"}
           style={{ opacity: path === "/" ? 1 : 0 }}>

@@ -1,3 +1,7 @@
+.contactHeader {
+  margin-top: 0;
+}
+
 .formLabel {
   display: grid;
   flex-direction: column;

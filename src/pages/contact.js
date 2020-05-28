@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { TransitionState } from "gatsby-plugin-transition-link";
 import FormInput from "../components/formInput";
+import Submit from "../components/submit";
 import styles from "./contact.module.css";
 import "../components/layout/animation.css";
 
@@ -14,10 +15,10 @@ export default () => {
       {({ transitionStatus }) => (
         <section
           className={`
-           ${transitionStatus === "entering" && "fadeIn"} 
-           ${transitionStatus === "exiting" && "fadeOut"}
+           ${transitionStatus === "entering" ? "fadeIn" : ""} 
+           ${transitionStatus === "exiting" ? "fadeOut" : ""}
          `}>
-          <h2>Hit me up</h2>
+          <h2 className={styles.contactHeader}>Hit me up</h2>
           <form>
             <FormInput placeholder="Name" value={name} setValue={setName} />
             <FormInput placeholder="Email" value={email} setValue={setEmail} />
@@ -27,8 +28,7 @@ export default () => {
               setValue={setMessage}
               textarea={true}
             />
-
-            <button type="submit">Send to me</button>
+            <Submit text="SUBMIT" />
           </form>
         </section>
       )}
