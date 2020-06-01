@@ -1,0 +1,10 @@
+.parallelogram {
+  width: 150px;
+  height: 40px;
+  transform: skew(-15deg);
+  background: var(--green-color);
+}
+
+.parallelogram > * {
+  transform: skew(15deg);
+}
