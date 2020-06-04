@@ -59,6 +59,7 @@ Based off of Microsoft's Metro Language */
   --grey-color: grey;
   --red-color: #fc3900;
   --green-color: #31ffb5;
+  --dark-green-color: #0d4d31;
   --orange-color: orange;
   --fade-time: 2s;
 }
@@ -172,6 +173,22 @@ footer {
   transition: 0.5s all ease-in-out;
 }
 
+.initialPosition {
+  transform: translateX(40vw) translateY(30vh) scale(1.5);
+}
+
+.aboutPosition {
+  transform: translateX(70px) translateY(-75px) scale(4);
+}
+
+.blogPosition {
+  transform: translateX(70px) translateY(-400px) scale(4);
+}
+
+.contactPosition {
+  transform: translateX(70px) translateY(-735px) scale(4);
+}
+
 /* mobile viewport */
 @media (max-width: 767px) {
   .layout {
@@ -180,6 +197,15 @@ footer {
 
   .layout > header,
   .layout > main {
-    margin: 0 1rem;
+    margin: auto;
+  }
+
+  .layout > header {
+    text-align: center;
+    width: 100%;
+  }
+
+  .initialPosition {
+    transform: translateX(20vw) translateY(30vh) scale(1.5);
   }
 }

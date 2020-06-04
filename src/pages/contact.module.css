@@ -1,3 +1,10 @@
 .contactHeader {
   margin-top: 0;
 }
+
+.contactForm {
+  display: flex;
+  flex-direction: column;
+  height: 600px;
+  justify-content: space-between;
+}

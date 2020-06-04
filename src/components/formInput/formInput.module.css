@@ -1,13 +1,15 @@
 /* position relative to have label move around freely */
 .formInputContainer {
+  font-size: 1.3rem;
   position: relative;
-  height: 150px;
 }
 
 /* absolute to allow free movement */
 .formLabel {
+  left: 0px;
+  pointer-events: none;
   position: absolute;
-  top: 5px;
+  top: 10px;
   transition: 0.2s;
 }
 
@@ -15,12 +17,10 @@
   /* remove standard input css */
   background: transparent;
   border: 0;
-  border-bottom: 2px solid var(--orange-color);
-  color: red;
+  font-size: 1.3rem;
   outline: 0;
   margin-top: 10px;
   position: absolute;
-  width: 50%;
 }
 
 /* hide placeholder text so placeholder doesn't conflict with input label */
@@ -33,5 +33,5 @@
 .formInput:focus ~ .formLabel,
 .formInput:not(:placeholder-shown) ~ .formLabel {
   transition: 0.2s;
-  top: -10px;
+  left: -110px;
 }

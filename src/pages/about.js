@@ -15,7 +15,7 @@ export default () => {
               ${transitionStatus === "entering" ? "fadeIn" : ""} 
               ${transitionStatus === "exiting" ? "fadeOut" : ""}
             `}>
-          <h3 className={styles.aboutHeader}>About Me</h3>
+          <h3 className={styles.aboutHeader}>Snippet of Myself</h3>
           <p>
             Born and raised in the Bay Area, I saw first hand how the influx of
             the tech scene changed my local surroundings, so I decided to join
@@ -28,7 +28,7 @@ export default () => {
             wrestling, boxing, and water polo since I thought getting my ass
             handed to me would make me a better individual. Still, I always had
             a soft spot for electronics, mainly trying to get programs to run on
-            my pc like random Battlefield 2 and Half Life 2 mods.
+            my pc like random Battlefield and Half Life 2 mods.
           </p>
           <p>
             {" "}
@@ -51,13 +51,13 @@ export default () => {
             now had free time between graduation and going to Montana, I
             pondered why I enjoyed dietetics and realized that I didn't. While
             the science behind nutrition interested me, the application of it
-            did not. Working in Hospitals is grueling and while I could do it,
+            did not. Working in hospitals is grueling and while I could do it,
             it was not what I wanted. I worked with several patients and doctors
             that changed my outlook of life positively; they taught me life
             skills that I don't think many people come across so I do not regret
             choosing this path initially rather than going for computer science
             straight off the bat. Deciding not to go to Montana did leave me in
-            position of uncertainty.
+            position of uncertainty though.
           </p>
           <p>
             I started applying for lab tech roles only to find out that most of

@@ -20,7 +20,7 @@ export default () => {
            ${transitionStatus === "exiting" ? "fadeOut" : ""}
          `}>
           <h2 className={styles.contactHeader}>Hit me up</h2>
-          <form>
+          <form className={styles.contactForm}>
             <Parallelogram>
               <FormInput placeholder="Name" value={name} setValue={setName} />
             </Parallelogram>

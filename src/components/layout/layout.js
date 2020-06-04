@@ -7,16 +7,16 @@ import "./animation.css";
 const determineYMovement = (path) => {
   switch (path) {
     case "/":
-      return { transform: `translateX(40vw) translateY(30vh) scale(1.5)` };
+      return styles.initialPosition;
     case "/about/":
-      return { transform: `translateX(70px) translateY(-75px) scale(4)` };
+      return styles.aboutPosition;
     case "/blog/":
-      return { transform: `translateX(70px) translateY(-400px) scale(4)` };
+      return styles.blogPosition;
     case "/contact/":
-      return { transform: `translateX(70px) translateY(-735px) scale(4)` };
+      return styles.contactPosition;
     default:
       console.error("Path does not exist");
-      return { transform: `translateX(40vw) translateY(30vh) scale(1.5)` };
+      return styles.initialPosition;
   }
 };
 
@@ -28,9 +28,10 @@ const Layout = ({ children, path, location, title }) => {
       <div className={styles.layout}>
         {/* header fades in on initial load for index page and fades out for other page transitions */}
         <header
-          className={path == "/" ? "fadeIn" : "fadeOut"}
+          className={path === "/" ? "fadeIn" : "fadeOut"}
           style={{ opacity: path === "/" ? 1 : 0 }}>
           <h3>John Alexander Ferguson</h3>
+          {/* TODO: add animation of different titles here */}
           <h6>full stack web developer</h6>
         </header>
         {/* TransitionState not included here to:
@@ -47,8 +48,11 @@ const Layout = ({ children, path, location, title }) => {
       </div>
       <TransitionPortal level="top">
         <div
-          className={path === "/" ? styles.centerNav : styles.topLeftNav}
-          style={determineYMovement(path)}>
+          className={`${path === "/" ? styles.centerNav : styles.topLeftNav}
+            ${determineYMovement(path)}
+            `}
+          // style={determineYMovement(path)}
+        >
           <NavBar />
         </div>
       </TransitionPortal>
