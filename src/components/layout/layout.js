@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "./layout.module.css";
 import NavBar from "../navbar";
+import SocialMediaIcons from "../socialMediaIcons";
 import { TransitionPortal } from "gatsby-plugin-transition-link";
 import "./animation.css";
 
@@ -30,9 +31,12 @@ const Layout = ({ children, path, location, title }) => {
         <header
           className={path === "/" ? "fadeIn" : "fadeOut"}
           style={{ opacity: path === "/" ? 1 : 0 }}>
-          <h3>John Alexander Ferguson</h3>
-          {/* TODO: add animation of different titles here */}
-          <h6>full stack web developer</h6>
+          <div className={styles.headerText}>
+            <h3>John Alexander Ferguson</h3>
+            {/* TODO: add animation of different titles here */}
+            <h6>full stack web developer</h6>
+          </div>
+          <SocialMediaIcons />
         </header>
         {/* TransitionState not included here to:
           1. allow customization for each page
@@ -50,9 +54,7 @@ const Layout = ({ children, path, location, title }) => {
         <div
           className={`${path === "/" ? styles.centerNav : styles.topLeftNav}
             ${determineYMovement(path)}
-            `}
-          // style={determineYMovement(path)}
-        >
+            `}>
           <NavBar />
         </div>
       </TransitionPortal>

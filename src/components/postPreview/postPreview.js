@@ -5,15 +5,15 @@ const PostPreview = ({ post }) => {
   console.log(post);
   return (
     <article>
-      <Link to={post.slug}>
+      <Link to={`/blog/${post.slug}`}>
         {/* <Image fluid={post.image.sharp.fluid} /> */}
       </Link>
       <div>
         <h3>
-          <Link to={post.slug}>{post.title}</Link>
+          <Link to={`/blog/${post.slug}`}>{post.title}</Link>
         </h3>
         <p>{post.excerpt}</p>
-        <Link to={post.slug}>read this post &rarr;</Link>
+        <Link to={`/blog/${post.slug}`}>read this post &rarr;</Link>
       </div>
     </article>
   );

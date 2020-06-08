@@ -1,0 +1,12 @@
+.iconsContainer {
+  display: flex;
+  justify-content: space-between;
+  list-style-type: none;
+  margin-right: 20px;
+  padding: 0;
+  width: 100px;
+}
+
+.iconsContainer svg {
+  fill: var(--white-color);
+}
