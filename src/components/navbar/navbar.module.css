@@ -67,6 +67,7 @@
 .showLink,
 .hideLink {
   transition: visibility 0.3s linear, opacity 0.3s linear;
+  pointer-events: none;
 }
 
 .showLink {
@@ -77,6 +78,10 @@
 .hideLink {
   opacity: 0;
   visibility: hidden;
+}
+
+.showLink > a {
+  pointer-events: all;
 }
 
 /* ================================================== */
