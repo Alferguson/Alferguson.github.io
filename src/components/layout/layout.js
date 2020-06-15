@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "./layout.module.css";
 import NavBar from "../navbar";
+import OrangeLine from "../orangeLine";
 import SocialMediaIcons from "../socialMediaIcons";
 import { TransitionPortal } from "gatsby-plugin-transition-link";
 import "./animation.css";
@@ -58,6 +59,7 @@ const Layout = ({ children, path, location, title }) => {
           <NavBar />
         </div>
       </TransitionPortal>
+      <OrangeLine visible={path === "/contact/"} />
     </>
   );
 };
