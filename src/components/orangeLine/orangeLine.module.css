@@ -5,6 +5,6 @@
 }
 
 .orangeLine > svg {
-  box-shadow: 0px 0px 40px 4px var(--orange-color);
+  box-shadow: 0px 0px 3px 2px #ad6014;
   max-height: 100%;
 }
