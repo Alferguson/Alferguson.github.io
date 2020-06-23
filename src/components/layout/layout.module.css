@@ -60,7 +60,7 @@ Based off of Microsoft's Metro Language */
   --red-color: #fc3900;
   --green-color: #31ffb5;
   --dark-green-color: #0d4d31;
-  --orange-color: #ac5f13;
+  --orange-color: #a05913;
   --fade-time: 2s;
 }
 
@@ -121,6 +121,12 @@ h6 {
 p {
   font-size: 1.2rem;
   line-height: 1.3;
+}
+
+a:link,
+a:visited {
+  color: var(--white-color) !important;
+  /* text-decoration: none; */
 }
 
 /* center content with 80% of width, and display header, main, and footer in 3 rows */
