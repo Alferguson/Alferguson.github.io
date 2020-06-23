@@ -56,7 +56,7 @@ const Layout = ({ children, path, location, title }) => {
           className={`${path === "/" ? styles.centerNav : styles.topLeftNav}
             ${determineYMovement(path)}
             `}>
-          <NavBar />
+          <NavBar pathname={location.pathname} />
         </div>
       </TransitionPortal>
       {/* <OrangeLine

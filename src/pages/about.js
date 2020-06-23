@@ -3,8 +3,8 @@ import { TransitionState } from "gatsby-plugin-transition-link";
 import styles from "./about.module.css";
 import "../components/layout/animation.css";
 
-export default () => {
-  const path = window.location.pathname;
+export default ({ location }) => {
+  const path = location.pathname;
 
   return (
     <TransitionState>
