@@ -33,7 +33,7 @@ const Layout = ({ children, path, location, title }) => {
           className={path === "/" ? "fadeIn" : "fadeOut"}
           style={{ opacity: path === "/" ? 1 : 0 }}>
           <div className={styles.headerText}>
-            <h3>John Alexander Ferguson</h3>
+            <h3>John (Alex)ander Ferguson</h3>
             {/* TODO: add animation of different titles here */}
             <h6>full stack web developer</h6>
           </div>

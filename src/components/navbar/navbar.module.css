@@ -21,6 +21,15 @@
   text-decoration: none;
 }
 
+.navBarLabel {
+  position: relative;
+  transition: font-size 0.5s ease;
+}
+
+.navBarLabel:hover {
+  font-size: 1.1em;
+}
+
 /* Remove margining from header tags within label */
 .greyBigHeader,
 .whiteBigHeader,
@@ -45,14 +54,16 @@
 
 .showSmallHeader,
 .hideSmallHeader {
-  margin-left: 2em;
+  margin-left: 0.75em;
   color: var(--grey-color);
   transition: visibility 0.3s linear, opacity 0.3s linear;
 }
 
 .showSmallHeader {
   opacity: 1;
+  position: absolute;
   visibility: visible;
+  top: 34px;
 }
 
 /* hide small text underneath NavBarLabel's header if in top left corner */

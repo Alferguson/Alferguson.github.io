@@ -15,13 +15,12 @@ export const query = graphql`
 `;
 
 const PostTemplate = (
-  { data: { mdx: post } } // desturing to aliasing here
+  { data: { mdx: post } } // destructuring to aliasing here
 ) => (
   <>
     <h1>{post.frontmatter.title}</h1>
-    <p>Posted by author</p>
+    <p>Posted by author {post.frontmatter.author}</p>
     <MDXRenderer>{post.body}</MDXRenderer>
-    <p>Post body goes here</p>
   </>
 );
 

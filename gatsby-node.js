@@ -8,8 +8,8 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
           }
         }
       }
-    }  
-  `)
+    }
+  `);
 
   if (result.errors) {
     reporter.panic("failed to create posts", result.errors);
@@ -17,13 +17,13 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
 
   const posts = result.data.allMdx.nodes;
 
-  posts.forEach(post => {
+  posts.forEach((post) => {
     actions.createPage({
-      path: post.frontmatter.slug,
+      path: `blog/${post.frontmatter.slug}`,
       component: require.resolve("./src/post-templates/blog-post.js"),
       context: {
         slug: post.frontmatter.slug
       }
-    })
+    });
   });
-}
+};
