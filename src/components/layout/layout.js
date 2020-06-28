@@ -17,7 +17,10 @@ const determineYMovement = (path) => {
     case "/contact/":
       return styles.contactPosition;
     default:
-      console.error("Path does not exist");
+      if (path.match(/\/blog\/./g)) {
+        return styles.blogPostPosition;
+      }
+      console.error(`Path does not exist, Path=${path}`);
       return styles.initialPosition;
   }
 };
@@ -25,6 +28,7 @@ const determineYMovement = (path) => {
 // Wraps every page with header, navbar, and footer
 // Main contains actual page components
 const Layout = ({ children, path, location, title }) => {
+  console.log(path.match(/\/blog\/./g));
   return (
     <>
       <div className={styles.layout}>
@@ -53,19 +57,16 @@ const Layout = ({ children, path, location, title }) => {
       </div>
       <TransitionPortal level="top">
         <div
-          className={`${path === "/" ? styles.centerNav : styles.topLeftNav}
+          className={`${
+            path === "/" || path.match(/\/blog\/./g)
+              ? styles.centerNav
+              : styles.topLeftNav
+          }
             ${determineYMovement(path)}
             `}>
           <NavBar pathname={location.pathname} />
         </div>
       </TransitionPortal>
-      {/* <OrangeLine
-        visible={path === "/contact/"}
-        x1="0"
-        y1="0"
-        x2="0"
-        y2="400"
-      /> */}
     </>
   );
 };

@@ -1,0 +1,16 @@
+.headerLink {
+  font-family: "Zegoe Caps";
+  text-decoration: none;
+}
+
+.bodyContainer {
+  margin-bottom: 50px;
+}
+
+.smallTextLink {
+  border: 1px solid var(--white-color);
+  font-family: "Zegoe UI Semi Bold - U";
+  padding: 5px;
+  padding-top: 20px;
+  text-decoration: none;
+}

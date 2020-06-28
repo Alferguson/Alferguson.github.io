@@ -1,20 +1,32 @@
 import React from "react";
-import { Link } from "gatsby";
+import TransitionLink from "gatsby-plugin-transition-link";
+import ZuneSquare from "../zuneSquare";
+import styles from "./postPreview.module.css";
 
-const PostPreview = ({ post }) => {
-  console.log(post);
+const transitionExit = 0;
+const transitionEntry = 0.15;
+
+const PostPreview = ({ post, pathname }) => {
   return (
     <article>
-      <Link to={`/blog/${post.slug}`}>
-        {/* <Image fluid={post.image.sharp.fluid} /> */}
-      </Link>
-      <div>
-        <h3>
-          <Link to={`/blog/${post.slug}`}>{post.title}</Link>
-        </h3>
-        <p>{post.excerpt}</p>
-        <Link to={`/blog/${post.slug}`}>read this post &rarr;</Link>
-      </div>
+      <h3>
+        <TransitionLink
+          exit={{ length: transitionExit }}
+          entry={{ delay: transitionEntry }}
+          className={styles.headerLink}
+          to={`/blog/${post.slug}`}>
+          {post.title}
+        </TransitionLink>
+      </h3>
+      <p className={styles.bodyContainer}>{post.excerpt}</p>
+      <TransitionLink
+        exit={{ length: transitionExit }}
+        entry={{ delay: transitionEntry }}
+        to={`/blog/${post.slug}`}>
+        <ZuneSquare style={{ paddingLeft: "20px" }}>
+          read this post &rarr;
+        </ZuneSquare>
+      </TransitionLink>
     </article>
   );
 };

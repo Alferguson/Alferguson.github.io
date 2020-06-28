@@ -1,0 +1,7 @@
+.blogPost {
+  width: 70%;
+}
+
+.blogPost > h1 {
+  margin-top: 0;
+}

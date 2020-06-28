@@ -6,13 +6,15 @@ import styles from "./navbar.module.css";
 const checkPath = (p, matchPath) =>
   p === matchPath || p === "/" ? true : false;
 
-const NavBarLabel = ({ upperText, lowerText }) => {
+const isBlogPath = (p) => p.match(/\/blog\/./g);
+
+const NavBarLabel = ({ upperText, lowerText, override = null }) => {
   const path = window.location.pathname;
   return (
     <span className={styles.navBarLabel}>
       <h3
         className={
-          path === `/${upperText}/`
+          path === `/${upperText}/` || override
             ? styles.greyBigHeader
             : styles.whiteBigHeader
         }>
@@ -20,7 +22,7 @@ const NavBarLabel = ({ upperText, lowerText }) => {
       </h3>
       <h6
         className={
-          path === `/${upperText}/`
+          path === `/${upperText}/` || override
             ? styles.hideSmallHeader
             : styles.showSmallHeader
         }>
@@ -67,6 +69,17 @@ const NavBar = ({ pathname }) => {
             <NavBarLabel upperText="contact" lowerText="me" />
           </TransitionLink>
         </li>
+
+        {isBlogPath(pathname) && (
+          <li className={styles.showLink}>
+            <TransitionLink
+              entry={{ delay: 0.5 }} // seconds, has to match layout/animation.css fadeout time
+              exit={{ length: 0.5 }} // seconds, has to match layout/animation.css fadeout time
+              to="/blog/">
+              <NavBarLabel upperText="blog" lowerText="posts" override={true} />
+            </TransitionLink>
+          </li>
+        )}
       </ul>
     </nav>
   );

@@ -120,7 +120,7 @@ h6 {
 }
 
 p {
-  font-family: "Zegoe UI - U";
+  font-family: "Zegoe Light - U";
   font-size: 1.2em;
   line-height: 1.3;
 }
@@ -202,6 +202,10 @@ footer {
 
 .contactPosition {
   transform: translateX(70px) translateY(-735px) scale(4);
+}
+
+.blogPostPosition {
+  transform: translateX(70px) translateY(-800px) scale(4);
 }
 
 /* mobile viewport */

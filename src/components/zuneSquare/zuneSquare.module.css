@@ -1,5 +1,6 @@
-.squareLink {
+.zuneSquare {
   border: 1px solid var(--white-color);
+  display: inline-block;
   font-family: "Zegoe UI Semi Bold - U";
   padding: 5px;
   padding-top: 20px;
