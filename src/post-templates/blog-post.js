@@ -6,6 +6,30 @@ import ZuneSquare from "../components/zuneSquare";
 import styles from "./blog-post.module.css";
 import "../components/layout/animation.css";
 
+const NavBarLabel = ({ upperText, lowerText }) => {
+  const path = window.location.pathname;
+  return (
+    <span className={styles.navBarLabel}>
+      <h3
+        className={
+          path === `/${upperText}/`
+            ? styles.greyBigHeader
+            : styles.whiteBigHeader
+        }>
+        {upperText}
+      </h3>
+      <h6
+        className={
+          path === `/${upperText}/`
+            ? styles.hideSmallHeader
+            : styles.showSmallHeader
+        }>
+        {lowerText.toUpperCase()}
+      </h6>
+    </span>
+  );
+};
+
 export const query = graphql`
   query($slug: String!) {
     mdx(frontmatter: { slug: { eq: $slug } }) {
@@ -43,6 +67,15 @@ const PostTemplate = (
         </TransitionLink>
       </article>
     )}
+
+    {/* <li className={styles.navBarLink}>
+      <TransitionLink
+        entry={{ delay: 0.5 }} // seconds, has to match layout/animation.css fadeout time
+        exit={{ length: 0.5 }} // seconds, has to match layout/animation.css fadeout time
+        to="/blog/">
+        <NavBarLabel upperText={post.frontmatter.title} lowerText="" />
+      </TransitionLink>
+    </li> */}
   </TransitionState>
 );
 

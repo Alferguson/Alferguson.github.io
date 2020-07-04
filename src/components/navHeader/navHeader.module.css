@@ -1,0 +1,12 @@
+.navHeader {
+  color: var(--grey-color) !important;
+  font-size: 4em;
+  position: fixed;
+  left: 40px;
+  top: -50px;
+  text-decoration: none;
+}
+
+.navHeader > h3 {
+  margin: 0;
+}

@@ -1,37 +1,32 @@
 import React from "react";
 import styles from "./layout.module.css";
 import NavBar from "../navbar";
-import OrangeLine from "../orangeLine";
 import SocialMediaIcons from "../socialMediaIcons";
 import { TransitionPortal } from "gatsby-plugin-transition-link";
+import NavHeader from "../navHeader";
 import "./animation.css";
-
-const determineYMovement = (path) => {
-  switch (path) {
-    case "/":
-      return styles.initialPosition;
-    case "/about/":
-      return styles.aboutPosition;
-    case "/blog/":
-      return styles.blogPosition;
-    case "/contact/":
-      return styles.contactPosition;
-    default:
-      if (path.match(/\/blog\/./g)) {
-        return styles.blogPostPosition;
-      }
-      console.error(`Path does not exist, Path=${path}`);
-      return styles.initialPosition;
-  }
-};
 
 // Wraps every page with header, navbar, and footer
 // Main contains actual page components
 const Layout = ({ children, path, location, title }) => {
-  console.log(path.match(/\/blog\/./g));
   return (
     <>
       <div className={styles.layout}>
+        <TransitionPortal level="top">
+          {location.pathname !== "/" && (
+            <NavHeader pathname={location.pathname} />
+          )}
+        </TransitionPortal>
+
+        <TransitionPortal level="center">
+          {location.pathname === "/" && (
+            <div className={styles.centerNav}>
+              <NavBar pathname={location.pathname} />
+              {/* <h1>okat</h1> */}
+            </div>
+          )}
+        </TransitionPortal>
+
         {/* header fades in on initial load for index page and fades out for other page transitions */}
         <header
           className={path === "/" ? "fadeIn" : "fadeOut"}
@@ -43,6 +38,7 @@ const Layout = ({ children, path, location, title }) => {
           </div>
           <SocialMediaIcons />
         </header>
+
         {/* TransitionState not included here to:
           1. allow customization for each page
           2. since layout is on index page (landing page), a TransitionLink wasn't clicked meaning the state wasn't passed to this page in time
@@ -55,18 +51,6 @@ const Layout = ({ children, path, location, title }) => {
           <a href="https://www.gatsbyjs.org">Gatsby</a>
         </footer>
       </div>
-      <TransitionPortal level="top">
-        <div
-          className={`${
-            path === "/" || path.match(/\/blog\/./g)
-              ? styles.centerNav
-              : styles.topLeftNav
-          }
-            ${determineYMovement(path)}
-            `}>
-          <NavBar pathname={location.pathname} />
-        </div>
-      </TransitionPortal>
     </>
   );
 };

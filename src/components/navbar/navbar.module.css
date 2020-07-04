@@ -31,68 +31,46 @@
 }
 
 /* Remove margining from header tags within label */
-.greyBigHeader,
-.whiteBigHeader,
-.showSmallHeader,
-.hideSmallHeader {
+.whiteBigHeader {
   color: var(--white-color);
   margin: 0;
 }
 
-.greyBigHeader,
 .whiteBigHeader {
   transition: color 0.6s ease;
 }
 
-.greyBigHeader {
+.greySmallHeader {
   color: var(--grey-color);
-}
-
-.whiteBigHeader {
-  color: var(--white-color);
-}
-
-.showSmallHeader,
-.hideSmallHeader {
+  margin: 0;
   margin-left: 0.75em;
-  color: var(--grey-color);
-  transition: visibility 0.3s linear, opacity 0.3s linear;
-}
-
-.showSmallHeader {
   opacity: 1;
   position: absolute;
   visibility: visible;
+  transition: visibility 0.3s linear, opacity 0.3s linear;
   top: 34px;
-}
-
-/* hide small text underneath NavBarLabel's header if in top left corner */
-.hideSmallHeader {
-  opacity: 0;
-  visibility: hidden;
 }
 
 /* START OF SHOW/HIDE LINK */
 /* desc: show/hide link by using visibility and opacity CSS properties with transition property */
 /* ================================================== */
-.showLink,
-.hideLink {
-  transition: visibility 0.3s linear, opacity 0.3s linear;
+.link {
+  transition: 10s all ease-in-out;
   pointer-events: none;
 }
 
-.showLink {
+.link {
   opacity: 1;
   visibility: visible;
 }
 
-.hideLink {
-  opacity: 0;
-  visibility: hidden;
+.link > a {
+  pointer-events: all;
 }
 
-.showLink > a {
-  pointer-events: all;
+.moveLink {
+  transition: 2s all ease-in-out;
+  transform: translate(-20vh, -150px) scale(4);
 }
 
 /* ================================================== */

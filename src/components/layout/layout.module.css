@@ -127,7 +127,7 @@ p {
 
 a:link,
 a:visited {
-  color: var(--white-color) !important;
+  color: var(--white-color);
   /* text-decoration: none; */
 }
 
@@ -178,21 +178,26 @@ footer {
   text-align: right;
 }
 
-/* allow navbar to move freely between center of page and top left */
-.topLeftNav,
 .centerNav {
   animation: fadeIn ease var(--fade-time);
-  left: 0;
+  left: 50%;
+  top: 350px;
   position: fixed;
-  transform-origin: top center;
+  transform: translateX(-50%) scale(1.5);
   transition: 0.5s all ease-in-out;
 }
 
-.initialPosition {
-  transform: translateX(40vw) translateY(30vh) scale(1.5);
+/* center nav within centerNav */
+.centerNav > nav {
+  display: grid;
+  justify-content: center;
 }
 
-.aboutPosition {
+/* .initialPosition {
+  transform: translateX(40vw) translateY(30vh) scale(1.5);
+} */
+
+/* .aboutPosition {
   transform: translateX(70px) translateY(-75px) scale(4);
 }
 
@@ -202,11 +207,7 @@ footer {
 
 .contactPosition {
   transform: translateX(70px) translateY(-735px) scale(4);
-}
-
-.blogPostPosition {
-  transform: translateX(70px) translateY(-800px) scale(4);
-}
+} */
 
 /* mobile viewport */
 @media (max-width: 767px) {
