@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import TransitionLink from "gatsby-plugin-transition-link";
+import { HOME, ABOUT, BLOG, CONTACT } from "../../utils/constants";
 import styles from "./navbar.module.css";
 
 const NavBarLabel = ({ upperText, lowerText }) => (
@@ -9,38 +10,58 @@ const NavBarLabel = ({ upperText, lowerText }) => (
   </span>
 );
 
-const NavBar = ({ pathname }) => {
-  const [linkMove, setLinkMove] = useState(false);
+// TODO: Move state up to parent Layout component so all components can see what nav link was clicked
+const NavBar = ({
+  pathname,
+  navPath,
+  navigateDispatchers: {
+    navigateHome,
+    navigateAbout,
+    navigateBlog,
+    navigateContact
+  }
+}) => {
+  console.log("navPath in navbar is", navPath);
+  const determineMovement = (navPathState, title) => {
+    if (navPathState === title) {
+      return styles.moveLink;
+    } else if (navPathState === HOME) {
+      return styles.link;
+    } else {
+      return styles.hideLink;
+    }
+  };
   return (
     <nav className={styles.navBar}>
       <ul>
-        <li className={linkMove ? styles.moveLink : styles.link}>
+        <li className={determineMovement(navPath, ABOUT)}>
           <TransitionLink
             exit={{
-              delay: 100
+              delay: 0.75
             }}
             entry={{
-              length: 0
-              // delay: 20
+              length: 0.75
             }} // seconds, has to match layout/animation.css fadeout time
             to="/about/"
-            onClick={() => setLinkMove(true)}>
+            onClick={navigateAbout}>
             <NavBarLabel upperText="about" lowerText="me" />
           </TransitionLink>
         </li>
-        <li className={styles.link}>
+        <li className={determineMovement(navPath, BLOG)}>
           <TransitionLink
             exit={{ length: 0 }} // seconds, has to match layout/animation.css fadeout time
             entry={{ delay: 0 }} // seconds, has to match layout/animation.css fadeout time
-            to="/blog/">
+            to="/blog/"
+            onClick={navigateBlog}>
             <NavBarLabel upperText="blog" lowerText="posts" />
           </TransitionLink>
         </li>
-        <li className={styles.link}>
+        <li className={determineMovement(navPath, CONTACT)}>
           <TransitionLink
             exit={{ length: 0 }} // seconds, has to match layout/animation.css fadeout time
             entry={{ delay: 0 }} // seconds, has to match layout/animation.css fadeout time
-            to="/contact/">
+            to="/contact/"
+            onClick={navigateContact}>
             <NavBarLabel upperText="contact" lowerText="me" />
           </TransitionLink>
         </li>

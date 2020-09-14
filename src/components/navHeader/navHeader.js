@@ -7,8 +7,8 @@ const NavHeader = ({ pathname, link = "/" }) => {
   const text = pathname.replace(/\//g, "");
   return (
     <TransitionLink
-      entry={{ delay: 0.5 }} // seconds, has to match layout/animation.css fadeout time
-      exit={{ length: 0.5 }} // seconds, has to match layout/animation.css fadeout time
+      entry={{ delay: 0.75 }} // seconds, has to match layout/animation.css fadeout time
+      exit={{ length: 0.75 }} // seconds, has to match layout/animation.css fadeout time
       to={link}
       className={styles.navHeader}>
       <h3>{text}</h3>

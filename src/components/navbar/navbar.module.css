@@ -55,7 +55,7 @@
 /* desc: show/hide link by using visibility and opacity CSS properties with transition property */
 /* ================================================== */
 .link {
-  transition: 10s all ease-in-out;
+  transition: 0.75s all ease-in-out;
   pointer-events: none;
 }
 
@@ -69,8 +69,13 @@
 }
 
 .moveLink {
-  transition: 2s all ease-in-out;
-  transform: translate(-20vh, -150px) scale(4);
+  transition: 0.75s all ease-in-out;
+  transform: translate(-20vw, -150px) scale(4);
+}
+
+.hideLink {
+  opacity: 0;
+  transition: 0.75s all ease-in-out;
 }
 
 /* ================================================== */
