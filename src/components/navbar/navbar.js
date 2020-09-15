@@ -12,6 +12,7 @@ const NavBarLabel = ({ upperText, lowerText }) => (
 
 // TODO: Move state up to parent Layout component so all components can see what nav link was clicked
 const NavBar = ({
+  centerStyle,
   pathname,
   navPath,
   navigateDispatchers: {
@@ -21,7 +22,6 @@ const NavBar = ({
     navigateContact
   }
 }) => {
-  console.log("navPath in navbar is", navPath);
   const determineMovement = (navPathState, title) => {
     if (navPathState === title) {
       return styles.moveLink;
@@ -32,12 +32,12 @@ const NavBar = ({
     }
   };
   return (
-    <nav className={styles.navBar}>
+    <nav className={`${styles.navBar} ${centerStyle}`}>
       <ul>
         <li className={determineMovement(navPath, ABOUT)}>
           <TransitionLink
             exit={{
-              delay: 0.75
+              delay: 100.75
             }}
             entry={{
               length: 0.75

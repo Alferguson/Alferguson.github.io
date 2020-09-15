@@ -24,26 +24,29 @@ const Layout = ({ children, path, location, title }) => {
     navigateBlog,
     navigateContact
   };
-  console.log("navPath is", navPath);
 
   return (
     <>
       <div className={styles.layout}>
         <TransitionPortal level="top">
           {/* Hide the header on every page except the home page (this is for the first last name header) */}
-          {navPath !== HOME && <NavHeader pathname={location.pathname} />}
+          {navPath !== HOME && (
+            <NavHeader
+              pathname={location.pathname}
+              navigateHome={navigateHome}
+            />
+          )}
         </TransitionPortal>
 
         <TransitionPortal level="center">
           {/* Show the navbar only on the home page and home page's transition */}
           {path === "/" && (
-            <div className={styles.centerNav}>
-              <NavBar
-                pathname={location.pathname}
-                navPath={navPath}
-                navigateDispatchers={navigateDispatchers}
-              />
-            </div>
+            <NavBar
+              centerStyle={styles.centerNav}
+              pathname={location.pathname}
+              navPath={navPath}
+              navigateDispatchers={navigateDispatchers}
+            />
           )}
         </TransitionPortal>
 

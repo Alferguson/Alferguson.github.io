@@ -181,16 +181,9 @@ footer {
 .centerNav {
   animation: fadeIn ease var(--fade-time);
   left: 50%;
-  top: 350px;
+  top: 30%;
   position: fixed;
-  transform: translateX(-50%) scale(1.5);
   transition: 0.5s all ease-in-out;
-}
-
-/* center nav within centerNav */
-.centerNav > nav {
-  display: grid;
-  justify-content: center;
 }
 
 /* .initialPosition {
