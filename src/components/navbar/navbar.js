@@ -4,10 +4,10 @@ import { HOME, ABOUT, BLOG, CONTACT } from "../../utils/constants";
 import styles from "./navbar.module.css";
 
 const NavBarLabel = ({ upperText, lowerText }) => (
-  <span className={styles.navBarLabel}>
+  <div className={styles.navBarLabel}>
     <h3 className={styles.whiteBigHeader}>{upperText}</h3>
     <h6 className={styles.greySmallHeader}>{lowerText.toUpperCase()}</h6>
-  </span>
+  </div>
 );
 
 // TODO: Move state up to parent Layout component so all components can see what nav link was clicked
