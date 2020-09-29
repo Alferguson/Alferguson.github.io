@@ -22,44 +22,71 @@ const NavBar = ({
     navigateContact
   }
 }) => {
-  const determineMovement = (navPathState, title) => {
+  const determineMovement = (
+    navPathState,
+    title,
+    stationaryLinkStyle,
+    moveLinkStyle,
+    hideLinkStyle
+  ) => {
     if (navPathState === title) {
-      return styles.moveLink;
+      return moveLinkStyle;
     } else if (navPathState === HOME) {
-      return styles.link;
+      return stationaryLinkStyle;
     } else {
-      return styles.hideLink;
+      return hideLinkStyle;
     }
   };
+
   return (
     <nav className={`${styles.navBar} ${centerStyle}`}>
       <ul>
-        <li className={determineMovement(navPath, ABOUT)}>
+        <li
+          className={determineMovement(
+            navPath,
+            ABOUT,
+            styles.aboutStyle,
+            styles.moveAboutStyle,
+            styles.hideAboutStyle
+          )}>
           <TransitionLink
             exit={{
-              delay: 100.75
+              delay: 0.5
             }}
-            entry={{
-              length: 0.75
-            }} // seconds, has to match layout/animation.css fadeout time
             to="/about/"
             onClick={navigateAbout}>
             <NavBarLabel upperText="about" lowerText="me" />
           </TransitionLink>
         </li>
-        <li className={determineMovement(navPath, BLOG)}>
+        <li
+          className={determineMovement(
+            navPath,
+            BLOG,
+            styles.blogStyle,
+            styles.moveBlogStyle,
+            styles.hideBlogStyle
+          )}>
           <TransitionLink
-            exit={{ length: 0 }} // seconds, has to match layout/animation.css fadeout time
-            entry={{ delay: 0 }} // seconds, has to match layout/animation.css fadeout time
+            exit={{
+              delay: 0.5
+            }}
             to="/blog/"
             onClick={navigateBlog}>
             <NavBarLabel upperText="blog" lowerText="posts" />
           </TransitionLink>
         </li>
-        <li className={determineMovement(navPath, CONTACT)}>
+        <li
+          className={determineMovement(
+            navPath,
+            CONTACT,
+            styles.contactStyle,
+            styles.moveContactStyle,
+            styles.hideContactStyle
+          )}>
           <TransitionLink
-            exit={{ length: 0 }} // seconds, has to match layout/animation.css fadeout time
-            entry={{ delay: 0 }} // seconds, has to match layout/animation.css fadeout time
+            exit={{
+              delay: 0.5
+            }}
             to="/contact/"
             onClick={navigateContact}>
             <NavBarLabel upperText="contact" lowerText="me" />

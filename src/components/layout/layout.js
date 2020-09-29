@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import styles from "./layout.module.css";
 import NavBar from "../navbar";
 import SocialMediaIcons from "../socialMediaIcons";
@@ -10,6 +10,7 @@ import "./animation.css";
 // Wraps every page with header, navbar, and footer
 // Main contains actual page components
 const Layout = ({ children, path, location, title }) => {
+  console.log(path);
   // TODO: Fix if user refreshes on any of the pages as state resets
   const [navPath, setNavPath] = useState(HOME);
 
@@ -24,6 +25,37 @@ const Layout = ({ children, path, location, title }) => {
     navigateBlog,
     navigateContact
   };
+
+  useEffect(() => {
+    console.log("starting use effect");
+    // happens twice for transistion, once on exit and again on entry
+    switch (path) {
+      // case "/":
+      //   if (navPath !== HOME) {
+      //     navigateHome();
+      //   }
+      //   break;
+
+      case "/about/":
+        if (navPath !== ABOUT) {
+          navigateAbout();
+        }
+        break;
+      case "/blog/":
+        if (navPath !== BLOG) {
+          navigateBlog();
+        }
+        break;
+      case "/contact/":
+        if (navPath !== CONTACT) {
+          navigateContact();
+        }
+        break;
+
+      default:
+        break;
+    }
+  }, [navPath]);
 
   return (
     <>

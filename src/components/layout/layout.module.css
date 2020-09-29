@@ -62,6 +62,12 @@ Based off of Microsoft's Metro Language */
   --dark-green-color: #0d4d31;
   --orange-color: #a05913;
   --fade-time: 2s;
+  --first-nav-spacing: 25%;
+  --second-nav-spacing: 40%;
+  --third-nav-spacing: 55%;
+  --nav-header-top-spacing: -20px;
+  --nav-header-left-spacing: 20px;
+  --move-nav-speed: 0.5s;
 }
 
 html {
@@ -180,9 +186,9 @@ footer {
 
 .centerNav {
   animation: fadeIn ease var(--fade-time);
-  left: 50%;
-  top: 30%;
-  position: fixed;
+  /* left: 50%; */
+  /* top: 30%; */
+  /* position: fixed; */
   transition: 0.5s all ease-in-out;
 }
 

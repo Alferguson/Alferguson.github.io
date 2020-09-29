@@ -1,20 +1,11 @@
-/* remove bullets from list */
-/* put space between nav components */
-
 .navBar {
   width: 150px;
 }
 
 .navBar > ul {
-  position: relative;
-  display: grid;
-  flex-direction: column;
-  height: 350px;
   list-style-type: none;
   margin: 0;
   padding-left: 0;
-  /* necessary to center actual navbar */
-  left: -50%;
 }
 
 /* Remove underline for links */
@@ -23,7 +14,6 @@
 }
 
 .navBarLabel {
-  position: relative;
   transition: all 0.5s ease;
 }
 
@@ -36,10 +26,7 @@
   font-size: 2.5rem;
   color: var(--white-color);
   margin: 0;
-}
-
-.whiteBigHeader {
-  transition: color 0.6s ease;
+  transition: all var(--move-nav-speed) ease-in-out;
 }
 
 .greySmallHeader {
@@ -57,48 +44,122 @@
 /* START OF SHOW/HIDE LINK */
 /* desc: show/hide link by using visibility and opacity CSS properties with transition property */
 /* ================================================== */
-.link {
-  transition: 0.75s all ease-in-out;
+.aboutStyle,
+.blogStyle,
+.contactStyle {
+  transition: all var(--move-nav-speed) ease-in-out;
   pointer-events: none;
   opacity: 1;
   visibility: visible;
-  /* position: fixed; */
+  position: fixed;
+  left: 45%;
 }
 
-.link > a {
+.aboutStyle > a,
+.blogStyle > a,
+.contactStyle > a {
   pointer-events: all;
 }
 
-.moveLink {
-  /* transition: 0.75s all ease-in-out; */
-  /* transform: translate(-15vw, -130px) scale(3.5); */
-  animation: moveToUpperLeftCorner 15s;
-  /* animation: moveToUpperLeftCorner 0.75s; */
+.aboutStyle {
+  top: var(--first-nav-spacing);
+}
+
+.blogStyle {
+  top: var(--second-nav-spacing);
+}
+
+.contactStyle {
+  top: var(--third-nav-spacing);
+}
+
+.moveAboutStyle,
+.moveBlogStyle,
+.moveContactStyle {
   position: fixed;
+  transition: all var(--move-nav-speed) ease-in-out;
+  top: var(--nav-header-top-spacing);
+  left: var(--nav-header-left-spacing);
+}
+
+/* target the white big header */
+.moveAboutStyle h3,
+.moveBlogStyle h3,
+.moveContactStyle h3 {
+  transition: all var(--move-nav-speed) ease;
+  font-size: 8rem;
+  color: var(--grey-color);
 }
 
 /* target the grey small header */
-.moveLink h6 {
+.moveAboutStyle h6,
+.moveBlogStyle h6,
+.moveContactStyle h6 {
   opacity: 0;
-  transition: 0.75s all ease-in-out;
+  transition: all var(--move-nav-speed) ease-in-out;
 }
 
-.hideLink {
+.moveAboutStyle {
+  animation: moveAboutToUpperLeftCorner var(--move-nav-speed);
+}
+
+.moveBlogStyle {
+  animation: moveBlogToUpperLeftCorner var(--move-nav-speed);
+}
+
+.moveContactStyle {
+  animation: moveContactToUpperLeftCorner var(--move-nav-speed);
+}
+
+.hideAboutStyle,
+.hideBlogStyle,
+.hideContactStyle {
   opacity: 0;
-  transition: 0.75s all ease-in-out;
+  transition: all var(--move-nav-speed) ease-in-out;
+  left: 45%;
+  position: fixed;
+}
+
+.hideAboutStyle {
+  top: var(--first-nav-spacing);
+}
+.hideBlogStyle {
+  top: var(--second-nav-spacing);
+}
+.hideContactStyle {
+  top: var(--third-nav-spacing);
 }
 
 /* ================================================== */
 /* END OF SHOW/HIDE LINK */
 
-@keyframes moveToUpperLeftCorner {
+@keyframes moveAboutToUpperLeftCorner {
   from {
-    top: 50%;
-    left: 50%;
+    top: var(--first-nav-spacing);
+    left: 45%;
   }
   to {
-    /* top: 20px; */
-    top: 200px;
-    left: 200px;
+    top: var(--nav-header-top-spacing);
+    left: var(--nav-header-left-spacing);
+  }
+}
+@keyframes moveBlogToUpperLeftCorner {
+  from {
+    top: var(--second-nav-spacing);
+    left: 45%;
+  }
+  to {
+    top: var(--nav-header-top-spacing);
+    left: var(--nav-header-left-spacing);
+  }
+}
+@keyframes moveContactToUpperLeftCorner {
+  from {
+    top: var(--third-nav-spacing);
+    left: 45%;
+  }
+  to {
+    top: var(--nav-header-top-spacing);
+    left: var(--nav-header-left-spacing);
   }
 }
