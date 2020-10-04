@@ -10,12 +10,7 @@ export default ({ location: { pathname } }) => {
   return (
     <TransitionState>
       {({ transitionStatus }) => (
-        <section
-          className={`
-             ${styles.blogSection} 
-             ${transitionStatus === "entering" ? "fadeIn" : ""} 
-             ${transitionStatus === "exiting" ? "fadeOut" : ""}
-           `}>
+        <section className={styles.blogSection}>
           {posts.map((post) => (
             <>
               <PostPreview key={post.slug} post={post} pathname={pathname} />

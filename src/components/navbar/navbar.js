@@ -17,7 +17,7 @@ const determineMovement = (
   moveLinkStyle,
   hideLinkStyle
 ) => {
-  if (path === title) {
+  if (path.includes(title)) {
     return moveLinkStyle;
   } else if (path === HOME) {
     return stationaryLinkStyle;
@@ -28,6 +28,8 @@ const determineMovement = (
 
 // TODO: Move state up to parent Layout component so all components can see what nav link was clicked
 const NavBar = ({ centerStyle, pathname }) => {
+  console.log(pathname);
+  console.log(pathname.includes(BLOG));
   return (
     <nav className={`${styles.navBar} ${centerStyle}`}>
       <ul>
@@ -39,7 +41,7 @@ const NavBar = ({ centerStyle, pathname }) => {
             styles.moveAboutStyle,
             styles.hideAboutStyle
           )}>
-          <Link to={pathname === ABOUT ? HOME : ABOUT}>
+          <Link to={pathname.includes(ABOUT) ? HOME : ABOUT}>
             <NavBarLabel upperText="about" lowerText="me" />
           </Link>
         </li>
@@ -51,7 +53,7 @@ const NavBar = ({ centerStyle, pathname }) => {
             styles.moveBlogStyle,
             styles.hideBlogStyle
           )}>
-          <Link to={pathname === BLOG ? HOME : BLOG}>
+          <Link to={pathname.includes(BLOG) ? HOME : BLOG}>
             <NavBarLabel upperText="blog" lowerText="posts" />
           </Link>
         </li>
@@ -63,7 +65,7 @@ const NavBar = ({ centerStyle, pathname }) => {
             styles.moveContactStyle,
             styles.hideContactStyle
           )}>
-          <Link to={pathname === CONTACT ? HOME : CONTACT}>
+          <Link to={pathname.includes(CONTACT) ? HOME : CONTACT}>
             <NavBarLabel upperText="contact" lowerText="me" />
           </Link>
         </li>
