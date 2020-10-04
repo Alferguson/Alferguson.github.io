@@ -1,8 +1,9 @@
 import React from "react";
 import TransitionLink from "gatsby-plugin-transition-link";
 import styles from "./navHeader.module.css";
+import { HOME } from "../../utils/constants";
 
-const NavHeader = ({ pathname, navigateHome, link = "/" }) => {
+const NavHeader = ({ pathname, navigateHome, link = HOME }) => {
   // replace / in pathname
   const text = pathname.replace(/\//g, "");
   return (

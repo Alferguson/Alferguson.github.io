@@ -1,5 +1,5 @@
 // Navigation paths
-export const HOME = "HOME";
-export const ABOUT = "ABOUT";
-export const BLOG = "BLOG";
-export const CONTACT = "CONTACT";
+export const HOME = "/";
+export const ABOUT = "/about/";
+export const BLOG = "/blog/";
+export const CONTACT = "/contact/";

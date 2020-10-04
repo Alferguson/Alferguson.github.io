@@ -133,6 +133,7 @@
 /* ================================================== */
 /* END OF SHOW/HIDE LINK */
 
+/* TODO: MAKE MOBILE RESPONSIVE BY MAKING TEXT SMALLER AS IT GOES UPWARD */
 @keyframes moveAboutToUpperLeftCorner {
   from {
     top: var(--first-nav-spacing);

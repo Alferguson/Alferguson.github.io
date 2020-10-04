@@ -1,6 +1,7 @@
 import React from "react";
 import { TransitionState } from "gatsby-plugin-transition-link";
 import styles from "./about.module.css";
+import { HOME, ABOUT, BLOG, CONTACT } from "../utils/constants";
 import "../components/layout/animation.css";
 
 export default ({ location }) => {
@@ -9,12 +10,7 @@ export default ({ location }) => {
   return (
     <TransitionState>
       {({ transitionStatus }) => (
-        <section
-          className={`
-              ${styles.aboutSection} 
-              ${transitionStatus === "entering" ? "fadeIn" : ""} 
-              ${transitionStatus === "exiting" ? "fadeOut" : ""}
-            `}>
+        <section className={styles.aboutSection}>
           <h3 className={styles.aboutHeader}>Snippet of Myself</h3>
           <p>
             Born and raised in the Bay Area, I saw first hand how the influx of

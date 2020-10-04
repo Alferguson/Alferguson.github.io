@@ -21,7 +21,15 @@
 }
 
 .fadeOut {
-  animation: fadeOut ease 0.5s;
+  animation: fadeOut ease var(--fade-time);
+}
+
+.headerFadeIn {
+  animation: fadeIn ease 1s;
+}
+
+.headerFadeOut {
+  animation: fadeOut ease 1s;
 }
 
 /* FIX for scroll bar showing in contact page */

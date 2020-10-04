@@ -11,81 +11,14 @@ import "./animation.css";
 // Main contains actual page components
 const Layout = ({ children, path, location, title }) => {
   console.log(path);
-  // TODO: Fix if user refreshes on any of the pages as state resets
-  const [navPath, setNavPath] = useState(HOME);
-
-  const navigateHome = () => setNavPath(HOME);
-  const navigateAbout = () => setNavPath(ABOUT);
-  const navigateBlog = () => setNavPath(BLOG);
-  const navigateContact = () => setNavPath(CONTACT);
-
-  const navigateDispatchers = {
-    navigateHome,
-    navigateAbout,
-    navigateBlog,
-    navigateContact
-  };
-
-  useEffect(() => {
-    console.log("starting use effect");
-    // happens twice for transistion, once on exit and again on entry
-    switch (path) {
-      // case "/":
-      //   if (navPath !== HOME) {
-      //     navigateHome();
-      //   }
-      //   break;
-
-      case "/about/":
-        if (navPath !== ABOUT) {
-          navigateAbout();
-        }
-        break;
-      case "/blog/":
-        if (navPath !== BLOG) {
-          navigateBlog();
-        }
-        break;
-      case "/contact/":
-        if (navPath !== CONTACT) {
-          navigateContact();
-        }
-        break;
-
-      default:
-        break;
-    }
-  }, [navPath]);
 
   return (
     <>
       <div className={styles.layout}>
-        <TransitionPortal level="top">
-          {/* Hide the header on every page except the home page (this is for the first last name header) */}
-          {navPath !== HOME && (
-            <NavHeader
-              pathname={location.pathname}
-              navigateHome={navigateHome}
-            />
-          )}
-        </TransitionPortal>
-
-        <TransitionPortal level="center">
-          {/* Show the navbar only on the home page and home page's transition */}
-          {path === "/" && (
-            <NavBar
-              centerStyle={styles.centerNav}
-              pathname={location.pathname}
-              navPath={navPath}
-              navigateDispatchers={navigateDispatchers}
-            />
-          )}
-        </TransitionPortal>
-
         {/* header fades in on initial load for home page and fades out for other page transitions */}
         <header
-          className={navPath === HOME ? "fadeIn" : "fadeOut"}
-          style={{ opacity: navPath === HOME ? 1 : 0 }}>
+          className={path === HOME ? "headerFadeIn" : "headerFadeOut"}
+          style={{ opacity: path === HOME ? 1 : 0 }}>
           <div className={styles.headerText}>
             <h3>John (Alex)ander Ferguson</h3>
             {/* TODO: add animation of different titles here */}
@@ -94,11 +27,16 @@ const Layout = ({ children, path, location, title }) => {
           <SocialMediaIcons />
         </header>
 
-        {/* TransitionState not included here to:
-          1. allow customization for each page
-          2. since layout is on index page (home page), a TransitionLink wasn't clicked meaning the state wasn't passed to this page in time
-        */}
-        <main>{children}</main>
+        <TransitionPortal level="center">
+          <NavBar centerStyle={styles.centerNav} pathname={location.pathname} />
+        </TransitionPortal>
+
+        {/* transition portal should be included here to allow fadeOut transitions from navigating backwards */}
+        <main
+          className={`${path !== HOME && "fadeIn"}`}
+          style={{ opacity: path !== HOME ? 1 : 0 }}>
+          {children}
+        </main>
 
         <footer>
           © {new Date().getFullYear()}, Built with

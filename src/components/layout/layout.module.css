@@ -65,8 +65,8 @@ Based off of Microsoft's Metro Language */
   --first-nav-spacing: 25%;
   --second-nav-spacing: 40%;
   --third-nav-spacing: 55%;
-  --nav-header-top-spacing: -20px;
-  --nav-header-left-spacing: 20px;
+  --nav-header-top-spacing: -70px;
+  --nav-header-left-spacing: 0px;
   --move-nav-speed: 0.5s;
 }
 
