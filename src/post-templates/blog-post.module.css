@@ -1,5 +1,6 @@
 .blogPost {
   width: 70%;
+  margin: auto;
 }
 
 .blogPost > h1 {
