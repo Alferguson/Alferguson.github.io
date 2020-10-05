@@ -12,10 +12,12 @@ export default ({ location: { pathname } }) => {
       {({ transitionStatus }) => (
         <section className={styles.blogSection}>
           {posts.map((post) => (
-            <>
-              <PostPreview key={post.slug} post={post} pathname={pathname} />
-              <hr className={styles.thematicBreak} />
-            </>
+            <ul key={post.slug}>
+              <li>
+                <PostPreview post={post} pathname={pathname} />
+                <hr className={styles.thematicBreak} />
+              </li>
+            </ul>
           ))}
         </section>
       )}

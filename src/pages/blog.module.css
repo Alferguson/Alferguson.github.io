@@ -1,5 +1,10 @@
 .blogSection {
   width: 70%;
+  margin: auto;
+}
+
+.blogSection > ul {
+  list-style-type: none;
 }
 
 .thematicBreak {

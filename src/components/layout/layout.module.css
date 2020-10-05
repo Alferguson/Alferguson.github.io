@@ -100,7 +100,7 @@ h1 {
 }
 
 h2 {
-  font-family: "Zegoe UI Semi Bold - U", sans-serif;
+  font-family: "Zegoe Light - U", sans-serif;
   font-size: 3em;
 }
 
@@ -171,10 +171,6 @@ header {
 .headerText > h6 {
   text-align: right;
   margin: 0;
-}
-
-.layout > main {
-  margin-left: 200px;
 }
 
 footer {

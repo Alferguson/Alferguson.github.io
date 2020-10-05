@@ -118,6 +118,7 @@
   transition: all var(--move-nav-speed) ease-in-out;
   left: 45%;
   position: fixed;
+  pointer-events: none;
 }
 
 .hideAboutStyle {

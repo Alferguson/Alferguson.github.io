@@ -14,32 +14,18 @@ export default () => {
   return (
     <TransitionState>
       {({ transitionStatus }) => (
-        <section
-          className={`
-           ${transitionStatus === "entering" ? "fadeIn" : ""} 
-           ${transitionStatus === "exiting" ? "fadeOut" : ""}
-         `}>
+        <section>
           <h2 className={styles.contactHeader}>Hit me up</h2>
           <form className={styles.contactForm}>
-            <Parallelogram>
-              <FormInput placeholder="Name" value={name} setValue={setName} />
-            </Parallelogram>
-            <Parallelogram>
-              <FormInput
-                placeholder="Email"
-                value={email}
-                setValue={setEmail}
-              />
-            </Parallelogram>
-            <Parallelogram>
-              <FormInput
-                placeholder="Message"
-                value={message}
-                setValue={setMessage}
-                textarea={true}
-              />
-            </Parallelogram>
-            <Submit text="SUBMIT" />
+            <FormInput placeholder="Name" value={name} setValue={setName} />
+            <FormInput placeholder="Email" value={email} setValue={setEmail} />
+            <FormInput
+              placeholder="Message"
+              value={message}
+              setValue={setMessage}
+              textarea={true}
+            />
+            {/* <Submit text="SUBMIT" /> */}
           </form>
         </section>
       )}

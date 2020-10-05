@@ -28,8 +28,6 @@ const determineMovement = (
 
 // TODO: Move state up to parent Layout component so all components can see what nav link was clicked
 const NavBar = ({ centerStyle, pathname }) => {
-  console.log(pathname);
-  console.log(pathname.includes(BLOG));
   return (
     <nav className={`${styles.navBar} ${centerStyle}`}>
       <ul>
