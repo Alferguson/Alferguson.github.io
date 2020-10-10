@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack:///./src/pages/index.js"],"names":[],"mappings":"2FAAA,0CAGe,4BAAM","file":"component---src-pages-index-js-46424f6e3836b759e56c.js","sourcesContent":["import React from \"react\";\r\nimport { graphql, useStaticQuery } from \"gatsby\";\r\n\r\nexport default () => <></>;\r\n"],"sourceRoot":""}
