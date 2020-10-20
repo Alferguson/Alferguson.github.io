@@ -218,11 +218,10 @@ footer {
 /* mobile viewport */
 @media (max-width: 767px) {
   .layout {
-    width: 95%;
+    width: 85%;
   }
 
-  .layout > header,
-  .layout > main {
+  .layout > header {
     margin: auto;
   }
 

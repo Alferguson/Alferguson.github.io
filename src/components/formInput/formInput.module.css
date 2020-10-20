@@ -19,10 +19,11 @@
   font-size: 1.3rem;
   border: 0;
   outline: 0;
-  border-bottom: 2px solid white;
+  border-bottom: 2px solid var(--white-color);
   margin-top: 14px;
   position: absolute;
-  color: white;
+  color: var(--white-color);
+  width: 100%;
 }
 
 /* hide placeholder text so placeholder doesn't conflict with input label */

@@ -1,10 +1,11 @@
 import React from "react";
+import ZuneSquare from "../zuneSquare";
 import styles from "./submit.module.css";
 
-const Submit = ({ text }) => {
+const Submit = () => {
   return (
     <button className={styles.submitBtn} type="submit">
-      <h4>{text}</h4>
+      <ZuneSquare>submit</ZuneSquare>
     </button>
   );
 };

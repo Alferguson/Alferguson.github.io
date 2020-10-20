@@ -25,7 +25,7 @@ export default () => {
               setValue={setMessage}
               textarea={true}
             />
-            <Submit text="SUBMIT" />
+            <Submit />
           </form>
         </section>
       )}

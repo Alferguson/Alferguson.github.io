@@ -23,9 +23,7 @@ const PostPreview = ({ post, pathname }) => {
         exit={{ length: transitionExit }}
         entry={{ delay: transitionEntry }}
         to={`/blog/${post.slug}`}>
-        <ZuneSquare style={{ paddingLeft: "20px" }}>
-          read this post &rarr;
-        </ZuneSquare>
+        <ZuneSquare>read this post &rarr;</ZuneSquare>
       </TransitionLink>
     </article>
   );
