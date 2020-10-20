@@ -17,25 +17,19 @@ module.exports = {
       }
     },
     {
-      resolve: "gatsby-plugin-mdx",
-      options: {
-        defaultLayouts: {
-          default: require.resolve("./src/components/layout")
-        }
-      }
-    },
-    {
       resolve: `gatsby-source-filesystem`,
       options: {
-        path: `${__dirname}/posts`,
+        path: `${__dirname}/src/posts`,
         name: `posts`
       }
     },
     {
-      resolve: `gatsby-source-filesystem`,
+      resolve: "gatsby-plugin-mdx",
       options: {
-        path: `${__dirname}/assets`,
-        name: `assets`
+        defaultLayouts: {
+          posts: require.resolve("./src/post-templates/blog-post"),
+          default: require.resolve("./src/components/layout")
+        }
       }
     }
   ]

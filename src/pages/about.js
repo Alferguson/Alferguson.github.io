@@ -1,7 +1,7 @@
 import React from "react";
 import { TransitionState } from "gatsby-plugin-transition-link";
 import styles from "./about.module.css";
-import { HOME, ABOUT, BLOG, CONTACT } from "../utils/constants";
+import { HOME, ABOUT, BLOG, CONTACT } from "../utils/pathnames";
 import "../components/layout/animation.css";
 
 export default ({ location }) => {

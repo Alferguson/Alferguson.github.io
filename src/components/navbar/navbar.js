@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import TransitionLink from "gatsby-plugin-transition-link";
 import { Link } from "gatsby";
-import { HOME, ABOUT, BLOG, CONTACT } from "../../utils/constants";
+import { HOME, ABOUT, BLOG, CONTACT } from "../../utils/pathnames";
 import styles from "./navbar.module.css";
 
 const NavBarLabel = ({ upperText, lowerText }) => (

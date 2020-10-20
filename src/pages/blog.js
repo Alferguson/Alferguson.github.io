@@ -1,7 +1,7 @@
 import React from "react";
 import { TransitionState } from "gatsby-plugin-transition-link";
 import PostPreview from "../components/postPreview";
-import usePosts from "../queries/use-posts";
+import usePosts from "../hooks/use-posts";
 import styles from "./blog.module.css";
 import "../components/layout/animation.css";
 

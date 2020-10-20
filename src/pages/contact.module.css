@@ -1,12 +1,27 @@
+.contactSection {
+  width: 30%;
+  margin: auto;
+}
+
 .contactHeader {
   margin-top: 0;
-  text-align: center;
+  margin-left: 80px;
 }
 
 .contactForm {
+  margin-top: 20px;
   display: flex;
   flex-direction: column;
   height: 400px;
   justify-content: space-between;
-  align-items: center;
+}
+
+/* mobile viewport */
+@media (max-width: 767px) {
+  .contactSection {
+    width: 100%;
+  }
+  .contactHeader {
+    margin: 0;
+  }
 }

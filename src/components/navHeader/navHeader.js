@@ -1,7 +1,7 @@
 import React from "react";
 import TransitionLink from "gatsby-plugin-transition-link";
 import styles from "./navHeader.module.css";
-import { HOME } from "../../utils/constants";
+import { HOME } from "../../utils/pathnames";
 
 const NavHeader = ({ pathname, navigateHome, link = HOME }) => {
   // replace / in pathname

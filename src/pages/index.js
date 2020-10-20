@@ -1,9 +1,4 @@
 import React from "react";
-import Layout from "../components/layout";
-import usePosts from "../queries/use-posts";
+import { graphql, useStaticQuery } from "gatsby";
 
-export default () => {
-  const posts = usePosts();
-  // console.log(posts);
-  return <> </>;
-};
+export default () => <></>;

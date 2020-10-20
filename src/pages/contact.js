@@ -14,7 +14,7 @@ export default () => {
   return (
     <TransitionState>
       {({ transitionStatus }) => (
-        <section>
+        <section className={styles.contactSection}>
           <h2 className={styles.contactHeader}>Hit me up</h2>
           <form className={styles.contactForm}>
             <FormInput placeholder="Name" value={name} setValue={setName} />
@@ -25,7 +25,7 @@ export default () => {
               setValue={setMessage}
               textarea={true}
             />
-            {/* <Submit text="SUBMIT" /> */}
+            <Submit text="SUBMIT" />
           </form>
         </section>
       )}

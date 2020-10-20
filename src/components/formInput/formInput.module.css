@@ -16,11 +16,13 @@
 .formInput {
   /* remove standard input css */
   background: transparent;
-  border: 0;
   font-size: 1.3rem;
+  border: 0;
   outline: 0;
-  margin-top: 10px;
+  border-bottom: 2px solid white;
+  margin-top: 14px;
   position: absolute;
+  color: white;
 }
 
 /* hide placeholder text so placeholder doesn't conflict with input label */
